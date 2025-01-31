@@ -42,6 +42,32 @@ contract MetaMint is ERC721URIStorage {
         listingPrice = _listingPrice;
     }
 
+    function createNFT(string memory tokenURI, uint256 price) public returns(uint256){
+        _tokenIds++;
+        uint256 NFTokenId = _tokenIds;
+
+        _mint(msg.sender, NFTokenId);
+        _setTokenURI(NFTokenId, tokenURI);
+        createMarketItem(NFTokenId, price);
+
+        return NFTokenId;
+    }
+
+    function createMarketItem(uint256 tokenId, uint256 price) private{
+        require(price > 0, "Price must be grater then 0");
+        require(msg.value == listingPrice, "Price must be equal to listing price");
+
+        idMarketItem[tokenId] = MarketItem(
+            tokenId,
+            payable(msg.sender),
+            payable(address(this)),
+            price,
+            false
+        );
+
+        _transfer(msg.sender, address(this), tokenId);
+    }
+
     function getListingPrice() public view returns (uint256){
         return listingPrice;
     }
