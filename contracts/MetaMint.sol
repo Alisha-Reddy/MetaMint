@@ -9,8 +9,8 @@ contract MetaMint is ERC721URIStorage {
     uint256 listingPrice = 0.0025 ether;
 
     uint256 private counter;
-    uint256 private _tokenIds;
-    uint256 private _itemsSold;
+    uint256 private tokenIdsCounter;
+    uint256 private itemsSoldCounter;
     address payable owner;
 
     struct MarketItem{
@@ -44,8 +44,8 @@ contract MetaMint is ERC721URIStorage {
 
     // Fnction to create an NFT
     function createNFT(string memory tokenURI, uint256 price) public returns(uint256){
-        _tokenIds++;
-        uint256 NFTokenId = _tokenIds;
+        tokenIdsCounter++;
+        uint256 NFTokenId = tokenIdsCounter;
 
         _mint(msg.sender, NFTokenId);
         _setTokenURI(NFTokenId, tokenURI);
@@ -82,8 +82,26 @@ contract MetaMint is ERC721URIStorage {
         idMarketItem[tokenId].seller = payable(msg.sender);
         idMarketItem[tokenId].owner = payable(address(this));
 
-        _itemsSold--;
+        itemsSoldCounter--;
         _transfer(msg.sender, address(this), tokenId);
+    }
+
+    // Function to create a market sale
+    function createSale(uint256 tokenId) public payable{
+        uint256 price = idMarketItem[tokenId].price;
+
+        require(msg.value == price, "Please submit the given price");
+
+        idMarketItem[tokenId].owner = payable(msg.sender);
+        idMarketItem[tokenId].sold = true;
+        idMarketItem[tokenId].owner = payable(address(0));
+
+        itemsSoldCounter++;
+
+        _transfer(address(this), msg.sender, tokenId);
+
+        payable(owner).transfer(listingPrice);
+        payable(idMarketItem[tokenId].seller).transfer(msg.value);
     }
 
     function getListingPrice() public view returns (uint256){
