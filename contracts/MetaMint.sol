@@ -22,7 +22,7 @@ contract MetaMint is ERC721URIStorage {
     }
     mapping (uint256 => MarketItem) private idMarketItem;
 
-    event MarketItemCreated(
+    event idMarketItemCreated(
         uint256 indexed tokenId,
         address seller,
         address owner,
@@ -66,6 +66,8 @@ contract MetaMint is ERC721URIStorage {
         );
 
         _transfer(msg.sender, address(this), tokenId);
+
+        emit idMarketItemCreated(topkenId, msg.sender, address(this), price, false);
     }
 
     function getListingPrice() public view returns (uint256){
