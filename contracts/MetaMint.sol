@@ -42,6 +42,7 @@ contract MetaMint is ERC721URIStorage {
         listingPrice = _listingPrice;
     }
 
+    // Fnction to create an NFT
     function createNFT(string memory tokenURI, uint256 price) public returns(uint256){
         _tokenIds++;
         uint256 NFTokenId = _tokenIds;
@@ -53,6 +54,7 @@ contract MetaMint is ERC721URIStorage {
         return NFTokenId;
     }
 
+    // Function to create a marketItem 
     function createMarketItem(uint256 tokenId, uint256 price) private{
         require(price > 0, "Price must be grater then 0");
         require(msg.value == listingPrice, "Price must be equal to listing price");
@@ -67,7 +69,7 @@ contract MetaMint is ERC721URIStorage {
 
         _transfer(msg.sender, address(this), tokenId);
 
-        emit idMarketItemCreated(topkenId, msg.sender, address(this), price, false);
+        emit idMarketItemCreated(tokenId, msg.sender, address(this), price, false);
     }
 
     function getListingPrice() public view returns (uint256){
