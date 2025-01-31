@@ -72,6 +72,20 @@ contract MetaMint is ERC721URIStorage {
         emit idMarketItemCreated(tokenId, msg.sender, address(this), price, false);
     }
 
+    // Function to sell or resell your token
+    function sellNFTToken(uint256 tokenId, uint256 price) public payable{
+        require(idMarketItem[tokenId].owner == msg.sender, "Only the owner can sell the NFT");
+        require(msg.value == listingPrice, "Price must be equal to listing price");
+
+        idMarketItem[tokenId].sold = false;
+        idMarketItem[tokenId].price = price;
+        idMarketItem[tokenId].seller = payable(msg.sender);
+        idMarketItem[tokenId].owner = payable(address(this));
+
+        _itemsSold--;
+        _transfer(msg.sender, address(this), tokenId);
+    }
+
     function getListingPrice() public view returns (uint256){
         return listingPrice;
     }
