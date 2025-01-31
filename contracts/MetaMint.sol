@@ -110,9 +110,9 @@ contract MetaMint is ERC721URIStorage {
         uint256 currentIndex = 0;
         MarketItem[] memory items = new MarketItem[](unsoldItemCount);
 
-        for(uint256 i =0; i< tokenIdsCounter; i++){
-            if(idMarketItem[i+ 1].owner == address(this)){
-                items[currentIndex] = idMarketItem[i + 1];
+        for(uint256 i =1; i<= tokenIdsCounter; i++){
+            if(idMarketItem[i].owner == address(this)){
+                items[currentIndex] = idMarketItem[i];
                 currentIndex++;
             }
         }
@@ -124,16 +124,15 @@ contract MetaMint is ERC721URIStorage {
         uint256 itemCount = 0;
         uint256 currentIndex = 0;
 
-        for(uint256 i=0; i<tokenIdsCounter; i++){
-            if(idMarketItem[i+1].owner == msg.sender){
+        for(uint256 i=1; i<=tokenIdsCounter; i++){
+            if(idMarketItem[i].owner == msg.sender){
                 itemCount++;
             }
         }
         MarketItem[] memory items = new MarketItem[](itemCount);
-        for(uint256 i=0; i<tokenIdsCounter; i++){
-            if(idMarketItem[i+1].owner == msg.sender){
-                items[currentIndex] = idMarketItem[i+1];
-                currentIndex++;
+        for(uint256 i=1; i<=tokenIdsCounter; i++){
+            if(idMarketItem[i].owner == msg.sender){
+                items[currentIndex++] = idMarketItem[i];
             }
         }
         return items;
@@ -144,17 +143,16 @@ contract MetaMint is ERC721URIStorage {
         uint256 itemCount = 0;
         uint256 currentIndex = 0;
 
-        for(uint256 i=0; i< tokenIdsCounter; i++){
-            if(idMarketItem[i+1].seller == msg.sender){
+        for(uint256 i=1; i<= tokenIdsCounter; i++){
+            if(idMarketItem[i].seller == msg.sender){
                 itemCount++;
             }
         }
 
         MarketItem[] memory items = new MarketItem[](itemCount);
-        for(uint256 i=0; i< tokenIdsCounter; i++){
-            if(idMarketItem[i+1].seller == msg.sender){
-                items[currentIndex] = idMarketItem[i+1];
-                currentIndex++;
+        for(uint256 i=1; i<= tokenIdsCounter; i++){
+            if(idMarketItem[i].seller == msg.sender){
+                items[currentIndex++] = idMarketItem[i];
             }
         }
         return items;
