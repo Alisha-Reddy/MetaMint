@@ -104,6 +104,20 @@ contract MetaMint is ERC721URIStorage {
         payable(idMarketItem[tokenId].seller).transfer(msg.value);
     }
 
+    // Getting unsold NFT data
+    function getUnsoldNFT() public view returns(MarketItem[] memory){
+        uint256 unsoldItemCount = tokenIdsCounter - itemsSoldCounter;
+        uint256 currentIndex = 0;
+        MarketItem[] memory items = new MarketItem[](unsoldItemCount);
+
+        for(uint256 i =0; i< tokenIdsCounter; i++){
+            if(idMarketItem[i+ 1].owner == address(this)){
+                items[currentIndex] = idMarketItem[i + 1];
+                currentIndex++;
+            }
+        }
+    }
+
     function getListingPrice() public view returns (uint256){
         return listingPrice;
     }
