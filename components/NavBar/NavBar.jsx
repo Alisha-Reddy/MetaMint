@@ -95,7 +95,7 @@ const NavBar = () => {
       {
         sideMenu && (
           <div> {/* sidebar*/}
-            <SideBar setSideMenu={setSideMenu}/>
+            <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
       }
