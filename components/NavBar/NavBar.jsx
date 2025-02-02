@@ -88,20 +88,20 @@ const NavBar = () => {
             )}
           </div>
 
-          <div className='hidden'>
+          <div>
             <CgMenuLeft className='cursor-pointer text-4xl' onClick={() => {setSideMenu((prev) => !prev)}} />
           </div>
         </div>
-      </div>
 
       {
         sideMenu && (
-          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-40'>
+          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto z-40'>
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
       }
     </div>
+      </div>
   )
 }
 
