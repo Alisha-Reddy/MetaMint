@@ -19,10 +19,10 @@ const NavBar = () => {
   }
 
   return (
-    <div> {/* Navbar */}
-      <div> {/* navbar contaainer */}
-        <div> {/* navbar contaainer left*/}
-          <div> {/* logo*/}
+    <div className='relative w-[100%] p-2 z-50'>
+      <div className='w-[80%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
+        <div className='grid grid-cols-[1fr_2fr] items-center'> 
+          <div className='w-[60%] border '>
             <Image 
             src={images.logo}
             alt = "Meta Mint"
@@ -30,36 +30,38 @@ const NavBar = () => {
             height={100}
             />
           </div>
-          <div> {/* navbar contaainer left box input*/}
-            <div>{/* navbar contaainer left box input box*/}
-              <input type="text" placeholder='Search NFT' />
-              <BsSearch onClick={() =>{}} /> {/* search icon*/}
-            </div>
+          <div className="w-[60%] flex items-center justify-between p-2 border-2 rounded-3xl overflow-hidden">
+            <input
+              type="text"
+              placeholder="Search NFT"
+              className="bg-transparent flex-1 min-w-0 outline-none px-2"
+            />
+            <BsSearch className="cursor-pointer text-xl" onClick={() => {}} />
           </div>
+
         </div>
-        <div> {/* navbar contaainer right*/}
-          <div> {/* navbar contaainer right dicover*/}
+        <div className='grid grid-cols-[1fr_1fr_.5fr_1fr_.3fr] gap-4 items-center slef-end'>
+          <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
-              <div> {/* navbar contaainer right discover box*/}
+              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> {/* navbar contaainer right discover box*/}
                 <Discover />
               </div>
             )}
           </div>
 
-          <div> {/* navbar contaainer right help*/}
+          <div className='relative cursor-pointer'> {/* navbar contaainer right help*/}
             <button onClick={() => toggleMenu('help')}> Help</button>
             {activeMenu === 'help' && (
-              <div> {/* navbar contaainer right help box*/}
+              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> {/* navbar contaainer right help box*/}
                 <HelpCenter />
               </div>
             )}
           </div>
 
-          <div> {/* navbar contaainer right notify*/}
+          <div className='relative cursor-pointer'> {/* navbar contaainer right notify*/}
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications /> {/* notify*/}
-              Notification
+              <MdNotifications className='text-3xl' /> {/* notify*/}
             </button>
             {activeMenu === 'notification' && (
               <div className="dropdown">
@@ -68,17 +70,18 @@ const NavBar = () => {
             )}
           </div>
 
-          <div>{/* navbar container right button */}
+          <div className='relative cursor-pointer'>{/* navbar container right button */}
             <Button btnText="Create"></Button>
           </div>
 
-          <div> {/* navbar container right profile box */}
-            <div> {/* navbar container right profile */}
+          <div className='relative cursor-pointer'> {/* navbar container right profile box */}
+            <div className='rounded-full'> {/* navbar container right profile */}
               <Image 
               src={images.user1} 
               alt='Profile' 
               width={40}
-              onClick={() => toggleMenu('profile')}
+              onClick={() => toggleMenu('profile')} 
+              className='rounded-full'
               /> {/* navbar container right profile */}
             </div>
             {activeMenu === 'profile' && (
@@ -86,15 +89,15 @@ const NavBar = () => {
             )}
           </div>
 
-          <div> {/* navbar container right menuBtn  */}
-            <CgMenuLeft onClick={() => {setSideMenu((prev) => !prev)}} /> {/* menuIcon */}
+          <div className='hidden'> {/* navbar container right menuBtn  */}
+            <CgMenuLeft className='cursor-pointer text-4xl' onClick={() => {setSideMenu((prev) => !prev)}} /> {/* menuIcon */}
           </div>
         </div>
       </div>
 
       {
         sideMenu && (
-          <div> {/* sidebar*/}
+          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-50'> {/* sidebar*/}
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
