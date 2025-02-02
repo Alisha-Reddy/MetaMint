@@ -19,7 +19,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className='relative w-[100%] p-2 z-50'>
+    <div className='relative w-[100%] p-2 z-40'>
       <div className='w-[80%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
         <div className='grid grid-cols-[1fr_2fr] items-center'> 
           <div className='w-[60%] border '>
@@ -97,7 +97,7 @@ const NavBar = () => {
 
       {
         sideMenu && (
-          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-50'> {/* sidebar*/}
+          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-40'> {/* sidebar*/}
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
