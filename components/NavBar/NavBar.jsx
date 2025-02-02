@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import {MdNotifications} from 'react-icons/md'
 import {BsSearch} from "react-icons/bs"
 import {CgMenuLeft, CgMenuRight} from "react-icons/cg"
@@ -44,24 +43,24 @@ const NavBar = () => {
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
-              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> {/* navbar contaainer right discover box*/}
+              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'>
                 <Discover />
               </div>
             )}
           </div>
 
-          <div className='relative cursor-pointer'> {/* navbar contaainer right help*/}
+          <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('help')}> Help</button>
             {activeMenu === 'help' && (
-              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> {/* navbar contaainer right help box*/}
+              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> 
                 <HelpCenter />
               </div>
             )}
           </div>
 
-          <div className='relative cursor-pointer'> {/* navbar contaainer right notify*/}
+          <div className='relative cursor-pointer'>
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications className='text-3xl' /> {/* notify*/}
+              <MdNotifications className='text-3xl' />
             </button>
             {activeMenu === 'notification' && (
               <div className="dropdown">
@@ -70,34 +69,34 @@ const NavBar = () => {
             )}
           </div>
 
-          <div className='relative cursor-pointer'>{/* navbar container right button */}
+          <div className='relative cursor-pointer'>
             <Button btnText="Create"></Button>
           </div>
 
-          <div className='relative cursor-pointer'> {/* navbar container right profile box */}
-            <div className='rounded-full'> {/* navbar container right profile */}
+          <div className='relative cursor-pointer'>
+            <div className='rounded-full'> 
               <Image 
               src={images.user1} 
               alt='Profile' 
               width={40}
               onClick={() => toggleMenu('profile')} 
               className='rounded-full'
-              /> {/* navbar container right profile */}
+              />
             </div>
             {activeMenu === 'profile' && (
                 <Profile />
             )}
           </div>
 
-          <div className='hidden'> {/* navbar container right menuBtn  */}
-            <CgMenuLeft className='cursor-pointer text-4xl' onClick={() => {setSideMenu((prev) => !prev)}} /> {/* menuIcon */}
+          <div className='hidden'>
+            <CgMenuLeft className='cursor-pointer text-4xl' onClick={() => {setSideMenu((prev) => !prev)}} />
           </div>
         </div>
       </div>
 
       {
         sideMenu && (
-          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-40'> {/* sidebar*/}
+          <div className='custom-scrollbar fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto hidden z-40'>
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )

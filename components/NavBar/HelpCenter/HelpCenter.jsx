@@ -11,9 +11,9 @@ const HelpCenter = () => {
   ];
 
   return (
-    <div className='box'>
+    <div>
       {helpCenter.map((el, i) => (
-        <div key={i + 1} className="helpCenter">
+        <div key={i + 1} className="px-2 py-4 z-50 transition-all duration-300 ease-in hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:rounded-md">
           <Link href={el.link}>{el.name}</Link>
         </div>
       ))}
