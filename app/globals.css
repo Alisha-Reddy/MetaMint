@@ -4,13 +4,14 @@
 
 :root {
   --icons-color: #eff2ff;
-  --icons-light-color: #424242;
+  --icons-light-color: red;
   --icons-bg-color: #e8e8e8;
-  --shadow-dark-color: rgb(0, 11, 57);
-  --shadow-light-color: rgb(90, 105, 167);
-  --modal-bg-color: rgba(82, 104, 177, 0.156);
-  --ele-bg-color: rgba(55, 52, 232, 0.615);
-  --ele-hover-bg-color: rgba(0, 0, 189, 0.871);
+  --shadow-dark-color: rgb(104, 134, 253);
+  --shadow-light-color: rgba(82, 82, 245, 0.305);
+  --modal-bg-color: rgba(82, 104, 177, 0.178);
+  --modal-solid-bg: #00001f;
+  --ele-bg-color: rgb(5, 2, 220);
+  --ele-hover-bg-color: rgb(0, 0, 99);
   --main-bg-color: green;
 
   /* --box-shadow: 1rem_1rem_2rem_rgba(0,0,0,0.25); */

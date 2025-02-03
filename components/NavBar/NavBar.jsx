@@ -70,7 +70,7 @@ const NavBar = () => {
           </div>
 
           <div className='relative cursor-pointer'>
-            <Button btnName="Create" styleName='glowing'  handleClick={()=>{}}></Button>
+            <Button btnName="Create" styleName='glowing'  handleClick={()=>{}}/>
           </div>
 
           <div className='relative cursor-pointer'>
@@ -95,7 +95,7 @@ const NavBar = () => {
 
       {
         sideMenu && (
-          <div className='custom-scrollbar sm:display lg:hidden fixed top-0 w-96 bg-[var(--modal-bg-color)] shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] h-[100vh] overflow-y-auto z-40'>
+          <div className='custom-scrollbar sm:display lg:hidden fixed top-0 left-0 w-96 bg-[var(--modal-solid-bg)] shadow-[0.8rem_1rem_5rem_0.5rem] shadow-[var(--shadow-light-color)] h-[100vh] overflow-y-auto z-40'>
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
