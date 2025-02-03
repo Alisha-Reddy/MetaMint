@@ -19,9 +19,9 @@ const NavBar = () => {
 
   return (
     <div className='relative w-[100%] p-2 z-40'>
-      <div className='w-[80%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
+      <div className='w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
         <div className='grid grid-cols-[1fr_2fr] items-center'> 
-          <div className='w-[60%] border '>
+          <div className='w-[50%] border'>
             <Image 
             src={images.logo}
             alt = "Meta Mint"
@@ -39,7 +39,7 @@ const NavBar = () => {
           </div>
 
         </div>
-        <div className='grid grid-cols-[1fr_1fr_.5fr_1fr_.3fr] gap-4 items-center slef-end'>
+        <div className='grid lg:grid-cols-[1fr_1fr_.5fr_1fr_.3fr] sm:grid-cols-[1fr_1fr_.5fr_1fr_.5fr_.5fr] gap-4 items-center'>
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
@@ -58,9 +58,9 @@ const NavBar = () => {
             )}
           </div>
 
-          <div className='relative cursor-pointer'>
+          <div className='relative cursor-pointer flex'>
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications className='text-3xl' />
+              <MdNotifications className='text-2xl' />
             </button>
             {activeMenu === 'notification' && (
               <div className="dropdown">
@@ -70,7 +70,7 @@ const NavBar = () => {
           </div>
 
           <div className='relative cursor-pointer'>
-            <Button btnText="Create"></Button>
+            <Button btnName="Create" handleClick={()=>{}}></Button>
           </div>
 
           <div className='relative cursor-pointer'>
@@ -78,7 +78,7 @@ const NavBar = () => {
               <Image 
               src={images.user1} 
               alt='Profile' 
-              width={40}
+              width={50}
               onClick={() => toggleMenu('profile')} 
               className='rounded-full'
               />
@@ -86,10 +86,10 @@ const NavBar = () => {
             {activeMenu === 'profile' && (
                 <Profile />
             )}
-          </div>
 
+          </div>
           <div className='sm:display lg:hidden'>
-            <CgMenuLeft className='cursor-pointer text-4xl' onClick={() => {setSideMenu((prev) => !prev)}} />
+            <CgMenuLeft className='cursor-pointer text-2xl' onClick={() => {setSideMenu((prev) => !prev)}} />
           </div>
         </div>
 

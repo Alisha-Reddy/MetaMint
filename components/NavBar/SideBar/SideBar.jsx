@@ -108,8 +108,8 @@ const SideBar = ({setSideMenu}) => {
           </div>
         </div>
         <div className='p-8 flex items-center justify-between'>
-          <Button btnName="Create" />
-          <Button btnName="COnnect Wallet" />
+          <Button btnName="Create" handleClick={()=>{}} />
+          <Button btnName="COnnect Wallet" handleClick={()=>{}} />
         </div>
     </div>
   )
