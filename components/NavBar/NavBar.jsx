@@ -84,7 +84,10 @@ const NavBar = () => {
               />
             </div>
             {activeMenu === 'profile' && (
+                  // <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-4 w-80 rounded-2xl -left-36 top-16 z-50 bg-[var(--modal-bg-color)]'>
+              <div className='absolute top-16 right-0 px-4 py-2 text-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
                 <Profile />
+              </div>
             )}
 
           </div>

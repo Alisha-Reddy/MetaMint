@@ -17,7 +17,7 @@ const Profile = () => {
 
 
   return (
-    <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-4 w-80 rounded-2xl -left-36 top-16 z-50 bg-[var(--modal-bg-color)]'>
+    <div>
       <div className='flex-row justify-start p-2'>
         <div className='flex items-center gap-8'>
           <Image
@@ -35,21 +35,11 @@ const Profile = () => {
 
 
             {menuItems.map((item, index) => (
-              <div key={index} className='flex items-center gap-6 px-2 py-4 transition-all duration-300 hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:rounded-md'>
+              <div key={index} className='flex items-center gap-6 px-2 py-4 transition-all duration-300 hover:bg-[var(--icons-bg-color)] hover:text-[var(--icons-dark-color)] hover:rounded-md'>
                 {item.icon}
                 <Link href={item.link}>{item.text}</Link>
               </div>
             ))}
-
-
-        {/* <div className='profile_menu_two'>
-          {secondaryMenuItems.map((item, index) => (
-            <div key={index} className='flex items-center gap-8 px-o py-6 transition-all duration-300'>
-              {item.icon}
-              <Link href={item.link}>{item.text}</Link>
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );
