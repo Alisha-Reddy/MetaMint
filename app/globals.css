@@ -56,7 +56,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.custom-scrollbar::-webkit-scrollbar{
+.hide-scrollbar::-webkit-scrollbar{
   display: none;
 }
 

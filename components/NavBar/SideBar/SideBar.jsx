@@ -37,7 +37,7 @@ const SideBar = ({setSideMenu}) => {
   ];
 
   return (
-    <div className='sideBar'>
+    <div>
       <GrClose className='absolute top-12 right-8 transition-all duration-200 ease-in-out cursor-pointer shadow-[var(--box-shadow)] hover:rotate-90' onClick={()=>setSideMenu(false)}/>
         <div className='p-6 border-b-2 border-b-[var(--shadow-light-color)] '>
           <Image
@@ -67,7 +67,7 @@ const SideBar = ({setSideMenu}) => {
             </a>
           </div>
         </div>
-        <div className='flex flex-col gap-4 p-8 uppercase font-medium border-b-2 border-b-[var(--shadow-light-color)]'>
+        <div className='flex flex-col gap-4 p-8 uppercase font-medium'>
           <div className='cursor-pointer'>
             <div className='flex justify-between items-center' onClick={() => setOpenDiscover((prev) => !prev)}>
               <p>Discover</p>
