@@ -35,7 +35,7 @@ const NavBar = () => {
               placeholder="Search NFT"
               className="bg-transparent flex-1 min-w-0 outline-none px-2 text-sm sm:text-base"
             />
-            <BsSearch className="cursor-pointer text-xs sm:text-xl" onClick={() => {}} />
+            <BsSearch className="cursor-pointer text-xs sm:text-xl hover:text-2xl" onClick={() => {}} />
           </div>
 
         </div>
@@ -63,7 +63,7 @@ const NavBar = () => {
               <MdNotifications className='text-base sm:text-2xl hover:-rotate-12 hover:text-yellow-200' />
             </button>
             {activeMenu === 'notification' && (
-              <div className='absolute top-11 px-6 py-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
+              <div className='absolute top-11 -left-36 sm:left-0 px-6 py-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
                 <Notification />
               </div>
             )}

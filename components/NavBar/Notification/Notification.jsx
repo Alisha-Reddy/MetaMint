@@ -5,7 +5,7 @@ import images from "@/img"
 const Notification = () => {
   return (
     <div>
-      <p className='text-xs sm:text-xl font-semibold mb-2'>Notification</p>
+      <p className='text-xl font-semibold mb-2'>Notification</p>
       <div className='flex items-start gap-4 p-4 transition-all duration-300 ease-in hover:bg-[var(--icons-bg-color)] hover:text-[var(--icons-dark-color)] hover:rounded-3xl'> 
         <div className='rounded-[5rem]'>
           <Image 
