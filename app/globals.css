@@ -54,10 +54,9 @@ body {
   background-attachment: fixed;
   background-position: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
 }
 
-custom-scrollbar::-webkit-scrollbar{
+.custom-scrollbar::-webkit-scrollbar{
   display: none;
 }
 
@@ -110,6 +109,14 @@ custom-scrollbar::-webkit-scrollbar{
               inset 0 0 0.5em 0.25em var(--glow-color);
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 768px){
+  @media (max-width: 640px) {  
+    .glowing {
+      font-size: 12px; 
+      padding: 0.4em 1em; 
+      border-width: 0.1em; 
+    }
   
-}
+    .glowing::after {
+      transform: perspective(1.2em) rotateX(30deg) scale(1, 0.3);
+    }
+  }

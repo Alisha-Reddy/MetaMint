@@ -18,8 +18,8 @@ const NavBar = () => {
   }
 
   return (
-    <div className='relative w-[100%] p-2 z-40'>
-      <div className='w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
+    <div className='relative w-screen p-2 z-40'>
+      <div className='w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-1 sm:gap-4'>
         <div className='grid grid-cols-[1fr_2fr] items-center'> 
           <div className='w-[50%]'>
             <Image 
@@ -29,18 +29,18 @@ const NavBar = () => {
             height={100}
             />
           </div>
-          <div className="w-[60%] flex items-center justify-between p-2 border-2 rounded-3xl overflow-hidden">
+          <div className="w-[90%] sm:w-[60%] flex items-center justify-between px-1 sm:p-2 border-2 rounded-2xl sm:rounded-3xl overflow-hidden">
             <input
               type="text"
               placeholder="Search NFT"
-              className="bg-transparent flex-1 min-w-0 outline-none px-2"
+              className="bg-transparent flex-1 min-w-0 outline-none px-2 text-sm sm:text-base"
             />
-            <BsSearch className="cursor-pointer text-xl" onClick={() => {}} />
+            <BsSearch className="cursor-pointer text-xs sm:text-xl" onClick={() => {}} />
           </div>
 
         </div>
-        <div className='grid lg:grid-cols-[1fr_1fr_.5fr_1fr_.3fr] sm:grid-cols-[1fr_.5fr_.5fr_1fr_1fr_.5fr] gap-4 items-center'>
-          <div className='relative cursor-pointer'> 
+        <div className='grid sm:grid-cols-[1fr_1fr_.5fr_1fr_.3fr] grid-cols-[.5fr_1fr_.5fr_.5fr] gap-1 sm:gap-4 items-center text-xs sm:text-base'>
+          <div className='relative cursor-pointer hidden sm:block'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
               <div className='absolute top-10 px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-44 rounded-lg bg-[var(--modal-bg-color)]'>
@@ -49,7 +49,7 @@ const NavBar = () => {
             )}
           </div>
 
-          <div className='relative cursor-pointer'> 
+          <div className='relative cursor-pointer hidden sm:block'> 
             <button onClick={() => toggleMenu('help')}> Help</button>
             {activeMenu === 'help' && (
               <div className='absolute top-10 px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-44 rounded-lg bg-[var(--modal-bg-color)]'> 
@@ -60,7 +60,7 @@ const NavBar = () => {
 
           <div className='relative cursor-pointer flex'>
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications className='text-2xl hover:-rotate-12 hover:text-yellow-200' />
+              <MdNotifications className='text-base sm:text-2xl hover:-rotate-12 hover:text-yellow-200' />
             </button>
             {activeMenu === 'notification' && (
               <div className='absolute top-11 px-6 py-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
@@ -84,7 +84,6 @@ const NavBar = () => {
               />
             </div>
             {activeMenu === 'profile' && (
-                  // <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-4 w-80 rounded-2xl -left-36 top-16 z-50 bg-[var(--modal-bg-color)]'>
               <div className='absolute top-16 right-0 px-4 py-2 text-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
                 <Profile />
               </div>
@@ -92,7 +91,7 @@ const NavBar = () => {
 
           </div>
           <div className='sm:display lg:hidden'>
-            <CgMenuLeft className='cursor-pointer text-2xl' onClick={() => {setSideMenu((prev) => !prev)}} />
+            <CgMenuLeft className='cursor-pointer ml-1 sm:ml-0 text-base sm:text-2xl' onClick={() => {setSideMenu((prev) => !prev)}} />
           </div>
         </div>
 

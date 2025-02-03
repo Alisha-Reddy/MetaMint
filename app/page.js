@@ -3,8 +3,9 @@ import {NavBar, Footer, Button} from "../components"
 
 export default function Home() {
   return (
-  <>
-    <NavBar/>
-  </>
+    <main className="w-full">
+      <NavBar />
+    </main>
   );
 }
+
