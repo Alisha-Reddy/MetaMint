@@ -43,16 +43,16 @@ const NavBar = () => {
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
-              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'>
-                <Discover />
-              </div>
+              <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-60 rounded-lg bg-[var(--main-bg-color)]'>
+              <Discover />
+            </div>                       
             )}
           </div>
 
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('help')}> Help</button>
             {activeMenu === 'help' && (
-              <div className='absolute px-4 py-2 shadow-[var(--box-shadow)] w-60 rounded-lg bg-[var(--main-bg-color)]'> 
+              <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-60 rounded-lg bg-[var(--main-bg-color)]'> 
                 <HelpCenter />
               </div>
             )}
@@ -95,7 +95,7 @@ const NavBar = () => {
 
       {
         sideMenu && (
-          <div className='custom-scrollbar sm:display lg:hidden fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] h-[100vh] overflow-y-auto z-40'>
+          <div className='custom-scrollbar sm:display lg:hidden fixed top-0 w-96 bg-[var(--main-bg-color)] shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] h-[100vh] overflow-y-auto z-40'>
             <SideBar setSideMenu={setSideMenu}/> 
           </div>
         )
