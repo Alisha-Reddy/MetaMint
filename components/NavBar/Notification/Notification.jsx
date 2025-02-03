@@ -4,9 +4,9 @@ import images from "@/img"
 
 const Notification = () => {
   return (
-    <div className='absolute px-8 py-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-base w-96 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
-      <p className='text-xl font-semibold mb-8'>Notification</p>
-      <div className='flex items-start gap-4 p-4 transition-all duration-300 ease-in hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:rounded-3xl'> 
+    <div>
+      <p className='text-xl font-semibold mb-2'>Notification</p>
+      <div className='flex items-start gap-4 p-4 transition-all duration-300 ease-in hover:bg-[var(--icons-bg-color)] hover:text-[var(--icons-dark-color)] hover:rounded-3xl'> 
         <div className='rounded-[5rem]'>
           <Image 
           src={images.user1} 

@@ -60,10 +60,10 @@ const NavBar = () => {
 
           <div className='relative cursor-pointer flex'>
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications className='text-2xl hover:-rotate-12' />
+              <MdNotifications className='text-2xl hover:-rotate-12 hover:text-yellow-200' />
             </button>
             {activeMenu === 'notification' && (
-              <div>
+              <div className='absolute top-11 px-6 py-4 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-80 rounded-2xl z-50 bg-[var(--modal-bg-color)]'>
                 <Notification />
               </div>
             )}
