@@ -4,14 +4,14 @@
 
 :root {
   --icons-color: #eff2ff;
-  --icons-light-color: red;
+  --icons-dark-color: rgb(0, 0, 50);
   --icons-bg-color: #e8e8e8;
   --shadow-dark-color: rgb(104, 134, 253);
   --shadow-light-color: rgba(82, 82, 245, 0.305);
   --modal-bg-color: rgba(82, 104, 177, 0.178);
   --modal-solid-bg: #00001f;
-  --ele-bg-color: rgb(5, 2, 220);
-  --ele-hover-bg-color: rgb(0, 0, 99);
+  --ele-bg-color: rgb(5, 2, 204);
+  --ele-hover-bg-color: rgb(135, 135, 255);
   --main-bg-color: green;
 
   /* --box-shadow: 1rem_1rem_2rem_rgba(0,0,0,0.25); */
@@ -67,7 +67,7 @@ custom-scrollbar::-webkit-scrollbar{
   --enhanced-glow-color: rgb(46, 46, 255);
   --btn-color: rgb(0, 0, 113);
   border: 0.2em solid var(--glow-color);
-  padding: 0.5em 2.5em;
+  padding: 0.5em 1.3em;
   color: var(--glow-color);
   font-size: 15px;
   font-weight: bold;

@@ -21,7 +21,7 @@ const NavBar = () => {
     <div className='relative w-[100%] p-2 z-40'>
       <div className='w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-4'>
         <div className='grid grid-cols-[1fr_2fr] items-center'> 
-          <div className='w-[50%] border'>
+          <div className='w-[50%]'>
             <Image 
             src={images.logo}
             alt = "Meta Mint"
@@ -39,11 +39,11 @@ const NavBar = () => {
           </div>
 
         </div>
-        <div className='grid lg:grid-cols-[1fr_1fr_.5fr_1fr_.3fr] sm:grid-cols-[1fr_1fr_.5fr_1fr_.5fr_.5fr] gap-4 items-center'>
+        <div className='grid lg:grid-cols-[1fr_1fr_.5fr_1fr_.3fr] sm:grid-cols-[1fr_.5fr_.5fr_1fr_1fr_.5fr] gap-4 items-center'>
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('discover')}> Discover</button>
             {activeMenu === 'discover' && (
-              <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-60 rounded-lg bg-[var(--modal-bg-color)]'>
+              <div className='absolute top-10 px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-44 rounded-lg bg-[var(--modal-bg-color)]'>
               <Discover />
             </div>                       
             )}
@@ -52,7 +52,7 @@ const NavBar = () => {
           <div className='relative cursor-pointer'> 
             <button onClick={() => toggleMenu('help')}> Help</button>
             {activeMenu === 'help' && (
-              <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-60 rounded-lg bg-[var(--modal-bg-color)]'> 
+              <div className='absolute top-10 px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] w-44 rounded-lg bg-[var(--modal-bg-color)]'> 
                 <HelpCenter />
               </div>
             )}
@@ -60,10 +60,10 @@ const NavBar = () => {
 
           <div className='relative cursor-pointer flex'>
             <button onClick={() => toggleMenu('notification')}> 
-              <MdNotifications className='text-2xl' />
+              <MdNotifications className='text-2xl hover:-rotate-12' />
             </button>
             {activeMenu === 'notification' && (
-              <div className="dropdown">
+              <div>
                 <Notification />
               </div>
             )}
