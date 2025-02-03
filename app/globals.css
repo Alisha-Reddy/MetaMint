@@ -8,7 +8,7 @@
   --icons-bg-color: #e8e8e8;
   --shadow-dark-color: #cdcdcd;
   --shadow-light-color: white;
-  --main-bg-color: rgb(255, 244, 244);
+  --main-bg-color: rgb(255, 241, 241);
 
   --box-shadow: 1rem 1rem 1rem var(var(--shadow-dark-color), -1rem -1rem 1rem var(var(--shadow-dark-color)));
 

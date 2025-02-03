@@ -38,44 +38,44 @@ const SideBar = ({setSideMenu}) => {
 
   return (
     <div className='sideBar'>
-      <GrClose className='sideBar_closeBtn' onClick={()=>setSideMenu(false)}/>
-        <div className='sideBar_box'>
+      <GrClose className='absolute top-12 right-8 transition-all duration-200 ease-in-out cursor-pointer shadow-[var(--box-shadow)] hover:rotate-90' onClick={()=>setSideMenu(false)}/>
+        <div className='p-8 border-b border-b-[var(--icons-color)] '>
           <Image
           src={images.logo}
           alt='logo'
-          width={150}
-          height={150}
+          width={100}
+          height={100}
           />
-          <p>
+          <p className='mt-4'>
             Discover the most outstanding articles on all topics of NFT & your own stories and share them
           </p>
-          <div className='sideBar_social'>
-            <a href="#">
+          <div className='flex gap-5 text-xl items-center'>
+            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:shadow-md hover:shadow-[var(--icons-color)]'>
               <TiSocialFacebook/>
             </a>
-            <a href="#">
+            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:shadow-md hover:shadow-[var(--icons-color)]'>
               <TiSocialLinkedin/>
             </a>
-            <a href="#">
+            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:shadow-md hover:shadow-[var(--icons-color)]'>
               <TiSocialTwitter/>
             </a>
-            <a href="#">
+            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:shadow-md hover:shadow-[var(--icons-color)]'>
               <TiSocialYoutube/>
             </a>
-            <a href="#">
+            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--shadow-dark-color)] hover:shadow-md hover:shadow-[var(--icons-color)]'>
               <TiSocialInstagram/>
             </a>
           </div>
         </div>
-        <div className='sideBar_menu'>
+        <div className='p-8 uppercase font-medium border-b border-[var(--icons-color)]'>
           <div>
-            <div className='sideBar_menu_box' onClick={() => setOpenDiscover((prev) => !prev)}>
+            <div className='flex justify-between items-center' onClick={() => setOpenDiscover((prev) => !prev)}>
               <p>Discover</p>
               <TiArrowSortedDown/>
             </div>
             {
               openDiscover && (
-                <div className='sideBar_discover'>
+                <div className='px-4'>
                   {discover.map((el, i) =>(
                     <p key={i + 1}>
                       <Link href={el.link}>
@@ -88,13 +88,13 @@ const SideBar = ({setSideMenu}) => {
             }
           </div>
           <div>
-            <div className='sideBar_menu_box' onClick={() => setOpenHelp((prev) => !prev)}>
+            <div className='flex justify-between items-center' onClick={() => setOpenHelp((prev) => !prev)}>
               <p>Help Center</p>
               <TiArrowSortedDown/>
             </div>
             {
               openHelp && (
-                <div className='sideBar_discover'>
+                <div className='px-4'>
                   {helpCenter.map((el, i) =>(
                     <p key={i + 1}>
                       <Link href={el.link}>
@@ -107,7 +107,7 @@ const SideBar = ({setSideMenu}) => {
             }
           </div>
         </div>
-        <div className='sideBar_button'>
+        <div className='p-8 flex items-center justify-between'>
           <Button btnName="Create" />
           <Button btnName="COnnect Wallet" />
         </div>
