@@ -17,7 +17,7 @@ const Profile = () => {
 
 
   return (
-    <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-4 w-80 rounded-2xl -left-36 top-16 z-50 bg-[var(--main-bg-color)]'>
+    <div className='absolute px-4 py-2 shadow-[1rem_1rem_2rem_rgba(0,0,0,0.25)] text-4 w-80 rounded-2xl -left-36 top-16 z-50 bg-[var(--modal-bg-color)]'>
       <div className='flex-row justify-start p-2'>
         <div className='flex items-center gap-8'>
           <Image
