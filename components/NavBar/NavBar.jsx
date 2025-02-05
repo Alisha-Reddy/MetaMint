@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import {MdNotifications} from 'react-icons/md'
 import {BsSearch} from "react-icons/bs"
-import {CgMenuLeft, CgMenuRight} from "react-icons/cg"
+import {CgMenuLeft} from "react-icons/cg"
 import {Discover, HelpCenter, Notification, Profile, SideBar} from "./index"
 import {Button} from "../index"
 import images from "../../img"
@@ -35,7 +35,7 @@ const NavBar = () => {
               placeholder="Search NFT"
               className="bg-transparent flex-1 min-w-0 outline-none px-2 text-sm sm:text-base"
             />
-            <BsSearch className="cursor-pointer text-xs sm:text-xl hover:text-2xl" onClick={() => {}} />
+            <BsSearch className="cursor-pointer text-xs sm:text-xl sm:hover:text-2xl" onClick={() => {}} />
           </div>
 
         </div>
