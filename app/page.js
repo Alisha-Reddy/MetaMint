@@ -1,10 +1,9 @@
-import {NavBar, Footer, Button} from "../components"
+import {NavBar, Footer, HeroSection} from "../components"
 
 export default function Home() {
   return (
     <main className="w-full">
-      <NavBar />
-      <Footer />
+      <HeroSection />
     </main>
   );
 }
