@@ -14,8 +14,8 @@ import { Discover, HelpCenter } from '../NavBar'
 
 const Footer = () => {
   return (
-    <div>{/* footer */}
-      <div> {/* footer_box */}
+    <div className='w-full relative py-6'>{/* footer */}
+      <div className='w-[95%] mx-0 my-auto grid gris-cols[1fr]  sm:grid-cols-[1fr_1fr_1fr_2fr] items-start justify-between gap-12'> {/* footer_box */}
         <div> {/* footer_box_social */}
           <Image
           src={images.logo}
@@ -24,43 +24,43 @@ const Footer = () => {
           width={100}
           />
           <p> Empowering creators and collectors with a seamless, cutting-edge NFT experience.</p>
-          <div>{/* footer_social */}
-            <a href="#">
-              <TiSocialFacebook />
-            </a>
-            <a href="#">
-              <TiSocialLinkedin />
-            </a>
-            <a href="#">
-              <TiSocialTwitter />
-            </a>
-            <a href="#">
-              <TiSocialInstagram />
-            </a>
-            <a href="#">
-              <TiSocialYoutube />
-            </a>
-          </div>
+            <div className='flex gap-5 text-xl items-center'>{/* footer_social */}
+              <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+                <TiSocialFacebook/>
+              </a>
+              <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+                <TiSocialLinkedin/>
+              </a>
+              <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+              <TiSocialTwitter/>
+              </a>
+              <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+                <TiSocialYoutube/>
+              </a>
+              <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+                <TiSocialInstagram/>
+              </a>
+            </div>
         </div>
         <div>
           {/* footer_box_discover */}
-          <h3>Discover</h3>
+          <h1 className='font-bold text-xl'>Discover</h1>
           <Discover/>
         </div>
         <div>
           {/* footer_box_Help */}
-          <h3>Help Center</h3>
+          <h1 className='font-bold text-xl'>Help Center</h1>
           <HelpCenter/>
         </div>
         <div>
           {/* subscribe */}
-          <h3>Subscribe</h3>
-          <div>
+          <h1 className='font-bold text-xl'>Subscribe</h1>
+          <div className='w-full flex justify-between items-center px-6 py-3 bg-[var(--icons-bg-color)] rounded-3xl mt-4'>
             {/* subscribe_box */}
-            <input type="email" placeholder='Enter your email *' />
-            <RiSendPlaneFill /> {/* subscribe_box_send */}
+            <input type="email" placeholder='Enter your email' className='bg-transparent border-none outline-none w-[90%] text-[var(--icons-dark-color)] placeholder-[var(--icons-dark-color)]' />
+            <RiSendPlaneFill className='text-[var(--icons-dark-color)] text-2xl cursor-pointer' /> {/* subscribe_box_send */}
           </div>
-          <div> {/* subscribe_box_info */}
+          <div className='px-2 py-8'> {/* subscribe_box_info */}
             <p>Discover, mint, and trade NFTs seamlessly with our next-gen decentralized app. </p>
           </div>
         </div>
