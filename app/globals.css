@@ -49,6 +49,7 @@
 body {
   color: var(--icons-color);
   background-image: url('../img/Background.png');
+  /* background-color: #00001f; */
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
