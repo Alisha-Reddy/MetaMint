@@ -14,9 +14,9 @@ import { Discover, HelpCenter } from '../NavBar'
 
 const Footer = () => {
   return (
-    <div className='w-full relative py-6'>{/* footer */}
+    <div className='w-full relative p-6'>{/* footer */}
       <div className='w-[95%] mx-0 my-auto grid gris-cols[1fr]  sm:grid-cols-[1fr_1fr_1fr_2fr] items-start justify-between gap-12'> {/* footer_box */}
-        <div> {/* footer_box_social */}
+        <div className='flex flex-col items-center justify-center gap-2'> {/* footer_box_social */}
           <Image
           src={images.logo}
           alt='Logo'
