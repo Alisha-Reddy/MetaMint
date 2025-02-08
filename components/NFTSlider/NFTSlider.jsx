@@ -3,7 +3,7 @@ import React, {useState, useEffect, useCallback} from 'react'
 import Image from 'next/image'
 import {AiFillFire, AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import {MdVerified, MdTimer} from 'react-icons/md'
-import {TbArrowBigLeftLines, TbArrowBigRightLine} from 'react-icons/tb'
+import {TbArrowBigLeftLines, TbArrowBigRightLines} from 'react-icons/tb'
 import images from "@/img"
 import Button from "../Button/Button"
 import { initScriptLoader } from 'next/script'
@@ -68,7 +68,7 @@ const NFTSlider = () => {
             price: "00000032435 ETH",
             like: 7657,
             image: images.user4,
-            nftImage: images.nftImage4,
+            nftImage: images.nftImage1,
             time:{
                 day: 20,
                 hours: 10,
@@ -80,13 +80,13 @@ const NFTSlider = () => {
 
     const inc = useCallback(()=>{
         if(idNumber + 1 < sliderData.length){
-            setIdNumber(setIdNumber + 1)
+            setIdNumber(idNumber + 1)
         }
     }, [idNumber, sliderData.length])
 
     const dec = useCallback(()=>{
         if(idNumber > 0){
-            setIdNumber(setIdNumber - 1)
+            setIdNumber(idNumber - 1)
         }
     }, [idNumber, sliderData.length])
 
@@ -95,8 +95,8 @@ const NFTSlider = () => {
     // },[])
 
   return (
-        <div className='w-[95%] sm:w-[90%] mx-0 my-auto pt-96 sm:p-32 grid md:grid-cols-12 items-center gap-4 sm:gap-0'>{/* bigNFTSlider_box */}
-            <div className='col-start-1 col-end-7 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-30 h-[80vh] sm:h-[90vh]'>{/* bigNFTSlider_box_left */}
+        <div className='bg-green-600 w-[95%] mx-auto pt-60 sm:py-28 sm:px-12 grid md:grid-cols-[repeat(12,1fr)] items-center gap-4 sm:gap-0'>{/* bigNFTSlider_box */}
+            <div className='col-start-2 col-end-7 row-start-1 row-end-[- 1] bg-[var(--modal-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-10 h-[80vh] sm:h-[85vh]'>{/* bigNFTSlider_box_left */}
                 <h2 className='text-5xl'>{sliderData[idNumber].title}</h2>
 
                 <div className='grid grid-cols-2 items-center'>{/* bigNFTSlider_box_left_creator */}
@@ -164,10 +164,10 @@ const NFTSlider = () => {
                 </div>
                 <div className='flex items-center gap-8 text-3xl mt-12'>{/* bigNFTSlider_box_left_sliderbtn*/}
                     <TbArrowBigLeftLines className='cursor-pointer transition-all duration-300 ease-in hover:bg-[var(--shadow-dark-color)] hover:rounded-full hover:p-4 ' onClick={()=>dec()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
-                    <TbArrowBigRightLine onClick={()=>inc()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
+                    <TbArrowBigRightLines className='cursor-pointer transition-all duration-300 ease-in hover:bg-[var(--shadow-dark-color)] hover:rounded-full hover:p-4 ' onClick={()=>inc()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
                 </div>
             </div>
-            <div className='col-start-7 col-end-12 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-full p-4 z-30 h-[90vh]'>{/* bigNFTSlider_box_right */}
+            <div className='col-start-6 col-end-12 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-4  h-[90vh]'>{/* bigNFTSlider_box_right */}
                 <div className='relative'>{/* bigNFTSlider_box_right_box */}
                     <Image
                     src={sliderData[idNumber].nftImage}
