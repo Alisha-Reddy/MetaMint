@@ -96,7 +96,7 @@ const NFTSlider = () => {
 
   return (
         <div className='w-[95%] sm:w-[90%] mx-0 my-auto pt-96 sm:p-32 grid md:grid-cols-12 items-center gap-4 sm:gap-0'>{/* bigNFTSlider_box */}
-            <div className='col-start-1 col-end-7 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-30 h-[90vh]'>{/* bigNFTSlider_box_left */}
+            <div className='col-start-1 col-end-7 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-30 h-[80vh] sm:h-[90vh]'>{/* bigNFTSlider_box_left */}
                 <h2 className='text-5xl'>{sliderData[idNumber].title}</h2>
 
                 <div className='grid grid-cols-2 items-center'>{/* bigNFTSlider_box_left_creator */}
@@ -127,53 +127,54 @@ const NFTSlider = () => {
                 </div>
                 <div>{/* bigNFTSlider_box_left_bidding */}
                     <div className='border-2 border-[var(--icons-dark-color)] m-8 px-0 py-16 rounded-lg'>{/* bigNFTSlider_box_left_bidding_box */}
-                        <small>Current Bid</small>
+                        <small className='bg-[var(--shadow-dark-color)] p-4 rounded-lg font-semibold'>Current Bid</small>
                         <p>{sliderData[idNumber].price} 
                             <span>$221,21</span>
                         </p>
                     </div>
                     <p className='flex items-center gap-4'>{/* bigNFTSlider_box_left_bidding_box_auction */}
-                        <MdTimer />
+                        <MdTimer className='text-3xl' />
                         {/* bigNFTSlider_box_left_bidding_box_icon */}
-                        <span>Auction ending in</span>
+                        <span >Auction ending in</span>
                     </p>
-                    <div>
+                    <div className='flex items-center gap-12 text-center pt-4 pb-12 border border-[var(--shadow-dark-color)]'>
                         {/* bigNFTSlider_box_left_bidding_box_timer*/}
                         <div>{/* bigNFTSlider_box_left_bidding_box_timer_item*/}
-                            <p> {sliderData[idNumber].time.day} </p>
+                            <p className='text-3xl font-bold '> {sliderData[idNumber].time.day} </p>
                             <span>Days</span>
                         </div>
                         <div>{/* bigNFTSlider_box_left_bidding_box_timer_item*/}
-                            <p> {sliderData[idNumber].time.hours} </p>
+                            <p className='text-3xl font-bold '> {sliderData[idNumber].time.hours} </p>
                             <span>Hours</span>
                         </div>
                         <div>{/* bigNFTSlider_box_left_bidding_box_timer_item*/}
-                            <p> {sliderData[idNumber].time.minutes} </p>
+                            <p className='text-3xl font-bold '> {sliderData[idNumber].time.minutes} </p>
                             <span>Minutes</span>
                         </div>
                         <div>{/* bigNFTSlider_box_left_bidding_box_timer_item*/}
-                            <p> {sliderData[idNumber].time.seconds} </p>
+                            <p className='text-3xl font-bold '> {sliderData[idNumber].time.seconds} </p>
                             <span>Seconds</span>
                         </div>
                     </div>
 
-                    <div>{/* bigNFTSlider_box_left_button*/}
+                    <div className='flex items-center justify-center gap-16 p-8'>{/* bigNFTSlider_box_left_button*/}
                         <Button btnName="Place" handleClick={()=>{}} />
                         <Button btnName="View" handleClick={()=>{}} />
                     </div>
                 </div>
-                <div>{/* bigNFTSlider_box_left_sliderbtn*/}
-                    <TbArrowBigLeftLines onClick={()=>dec()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
+                <div className='flex items-center gap-8 text-3xl mt-12'>{/* bigNFTSlider_box_left_sliderbtn*/}
+                    <TbArrowBigLeftLines className='cursor-pointer transition-all duration-300 ease-in hover:bg-[var(--shadow-dark-color)] hover:rounded-full hover:p-4 ' onClick={()=>dec()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
                     <TbArrowBigRightLine onClick={()=>inc()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
                 </div>
             </div>
             <div className='col-start-7 col-end-12 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-full p-4 z-30 h-[90vh]'>{/* bigNFTSlider_box_right */}
-                <div>{/* bigNFTSlider_box_right_box */}
+                <div className='relative'>{/* bigNFTSlider_box_right_box */}
                     <Image
                     src={sliderData[idNumber].nftImage}
                     alt='NFT IMAGE'
+                    className='rounded-3xl'
                     />
-                    <div>{/* bigNFTSlider_box_right_box_like */}
+                    <div className='absolute top-12 right-12 flex items-center gap-4 text-2xl bg-[var(--main-bg-color)] text-[var(--shadow-dark-color)] p-4 rounded-2xl'>{/* bigNFTSlider_box_right_box_like */}
                         <AiFillHeart />
                         <span>{sliderData[idNumber].like}</span>
                     </div>
