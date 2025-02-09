@@ -174,7 +174,7 @@ const NFTSlider = () => {
                 </div>
 
             </div>
-            <div className='mt-10 sm:mt-0 md:col-start-7 md:col-end-12 md:row-start-1 md:row-end-[-1] md:shadow-[10px_10px_20px] shadow-[var(--shadow-light-color)] rounded-2xl md:p-4 md:h-[85vh]'>{/* bigNFTSlider_box_right */}
+            <div className='mt-10 sm:mt-0 md:col-start-7 md:col-end-12 md:row-start-1 md:row-end-[-1] md:shadow-[15px_15px_20px] md:shadow-[var(--shadow-light-color)] rounded-2xl md:p-4 md:h-[85vh]'>{/* bigNFTSlider_box_right */}
                 <div className='relative w-full h-full'>{/* bigNFTSlider_box_right_box */}
                     <Image
                     src={sliderData[idNumber].nftImage}
