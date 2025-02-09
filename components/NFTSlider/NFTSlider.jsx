@@ -95,12 +95,12 @@ const NFTSlider = () => {
     // },[])
 
   return (
-        <div className='bg-green-600 w-[95%] mx-auto pt-60 sm:py-28 sm:px-12 grid md:grid-cols-[repeat(12,1fr)] items-center gap-4 sm:gap-0'>{/* bigNFTSlider_box */}
-            <div className='col-start-2 col-end-7 row-start-1 row-end-[- 1] bg-[var(--modal-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-10 h-[80vh] sm:h-[85vh]'>{/* bigNFTSlider_box_left */}
-                <h2 className='text-5xl'>{sliderData[idNumber].title}</h2>
+        <div className=' w-[95%] mx-auto pt-60 sm:py-28 sm:px-12 grid md:grid-cols-[repeat(12,1fr)] items-center gap-4 sm:gap-0'>{/* bigNFTSlider_box */}
+            <div className='order-1 md:order-2 col-start-4 col-end-8 row-start-1 row-end-[- 1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-8 z-10 h-[68vh]'>{/* bigNFTSlider_box_left */}
+                <h2 className='text-5xl font-bold'>{sliderData[idNumber].title}</h2>
 
-                <div className='grid grid-cols-2 items-center'>{/* bigNFTSlider_box_left_creator */}
-                    <div className='flex items-center gap-4'>{/* bigNFTSlider_box_left_creator_profile */}
+                <div className='flex items-center'>{/* bigNFTSlider_box_left_creator */}
+                    <div className='flex flex-1 items-center gap-4'>{/* bigNFTSlider_box_left_creator_profile */}
                         <Image 
                         src={sliderData[idNumber].image}
                         alt = "Profile image"
@@ -108,36 +108,36 @@ const NFTSlider = () => {
                         height={50}
                         className='rounded-full'
                         />{/* bigNFTSlider_box_left_creator_profile_image */}
-                        <div style={{lineHeight:0}}>{/* bigNFTSlider_box_left_creator_profile_info */}
-                            <p className='mb-[-.7rem] mt-4'>Creator</p>
-                            <h4>{sliderData[idNumber].name}
+                        <div>{/* bigNFTSlider_box_left_creator_profile_info */}
+                            <p className='mt-2'>Creator</p>
+                            <h4 className='font-semibold inline-flex gap-1 items-center'>{sliderData[idNumber].name}
                                 <span>
                                     <MdVerified />
                                 </span>
                             </h4>
                         </div>
                     </div>
-                    <div className='flex items-center gap-4'>{/* bigNFTSlider_box_left_creator_collection */}
-                        <AiFillFire className='text-6xl' /> {/* bigNFTSlider_box_left_creator_collection_icon */}
-                        <div style={{lineHeight:0}}>{/* bigNFTSlider_box_left_creator_collection_info */}
-                            <p>Collection</p>
-                            <h4>{sliderData[idNumber].collection}</h4>
+                    <div className='flex flex-1 items-center gap-4'>{/* bigNFTSlider_box_left_creator_collection */}
+                        <AiFillFire className='text-5xl' /> {/* bigNFTSlider_box_left_creator_collection_icon */}
+                        <div>{/* bigNFTSlider_box_left_creator_collection_info */}
+                            <p className='mt-2'>Collection</p>
+                            <h4 className='font-semibold'>{sliderData[idNumber].collection}</h4>
                         </div>
                     </div>
                 </div>
                 <div>{/* bigNFTSlider_box_left_bidding */}
-                    <div className='border-2 border-[var(--icons-dark-color)] m-8 px-0 py-16 rounded-lg'>{/* bigNFTSlider_box_left_bidding_box */}
-                        <small className='bg-[var(--shadow-dark-color)] p-4 rounded-lg font-semibold'>Current Bid</small>
-                        <p>{sliderData[idNumber].price} 
+                    <div className='border-2 border-[var(--icons-dark-color)] my-4 px-10 py-4 rounded-lg relative'>{/* bigNFTSlider_box_left_bidding_box */}
+                        <small className='absolute -top-5 bg-[var(--main-bg-color)] p-3 rounded-lg font-semibold'>Current Bid</small>
+                        <p className='inline-flex gap-1 mt-4 '>{sliderData[idNumber].price} - 
                             <span>$221,21</span>
                         </p>
                     </div>
-                    <p className='flex items-center gap-4'>{/* bigNFTSlider_box_left_bidding_box_auction */}
+                    <p className='flex items-center justify-center gap-4 mt-2'>{/* bigNFTSlider_box_left_bidding_box_auction */}
                         <MdTimer className='text-3xl' />
                         {/* bigNFTSlider_box_left_bidding_box_icon */}
                         <span >Auction ending in</span>
                     </p>
-                    <div className='flex items-center gap-12 text-center pt-4 pb-12 border border-[var(--shadow-dark-color)]'>
+                    <div className='mx-auto flex justify-between text-center p-4'>
                         {/* bigNFTSlider_box_left_bidding_box_timer*/}
                         <div>{/* bigNFTSlider_box_left_bidding_box_timer_item*/}
                             <p className='text-3xl font-bold '> {sliderData[idNumber].time.day} </p>
@@ -162,20 +162,27 @@ const NFTSlider = () => {
                         <Button btnName="View" handleClick={()=>{}} />
                     </div>
                 </div>
-                <div className='flex items-center gap-8 text-3xl mt-12'>{/* bigNFTSlider_box_left_sliderbtn*/}
-                    <TbArrowBigLeftLines className='cursor-pointer transition-all duration-300 ease-in hover:bg-[var(--shadow-dark-color)] hover:rounded-full hover:p-4 ' onClick={()=>dec()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
-                    <TbArrowBigRightLines className='cursor-pointer transition-all duration-300 ease-in hover:bg-[var(--shadow-dark-color)] hover:rounded-full hover:p-4 ' onClick={()=>inc()}/>{/* bigNFTSlider_box_left_sliderbtn_icon*/}
+                <div className="flex justify-between w-full text-3xl">
+                    <TbArrowBigLeftLines
+                        className="cursor-pointer transition-all duration-300 ease-in hover:text-4xl hover:text-black hover:z-10 hover:drop-shadow-[2px_2px_2px_blue]"
+                        onClick={() => dec()}
+                    />
+                    <TbArrowBigRightLines
+                        className="cursor-pointer transition-all duration-300 ease-in hover:text-4xl hover:text-black hover:z-10 hover:drop-shadow-[2px_2px_2px_blue]"
+                        onClick={() => inc()}
+                    />
                 </div>
+
             </div>
-            <div className='col-start-6 col-end-12 row-start-1 row-end-[-1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-4  h-[90vh]'>{/* bigNFTSlider_box_right */}
-                <div className='relative'>{/* bigNFTSlider_box_right_box */}
+            <div className='order-2 md:order-1 col-start-7 col-end-12 row-start-1 row-end-[-1] shadow-[10px_10px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-4 h-[85vh]'>{/* bigNFTSlider_box_right */}
+                <div className='relative w-full h-full'>{/* bigNFTSlider_box_right_box */}
                     <Image
                     src={sliderData[idNumber].nftImage}
                     alt='NFT IMAGE'
-                    className='rounded-3xl'
+                    className="w-full h-full object-fill rounded-3xl"
                     />
-                    <div className='absolute top-12 right-12 flex items-center gap-4 text-2xl bg-[var(--main-bg-color)] text-[var(--shadow-dark-color)] p-4 rounded-2xl'>{/* bigNFTSlider_box_right_box_like */}
-                        <AiFillHeart />
+                    <div className='absolute top-8 right-8 flex items-center gap-2 text-2xl bg-red-100 text-red-500 p-2 rounded-2xl'>{/* bigNFTSlider_box_right_box_like */}
+                        <AiFillHeart className='text-red-500' />
                         <span>{sliderData[idNumber].like}</span>
                     </div>
                 </div>

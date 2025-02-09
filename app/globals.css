@@ -12,7 +12,7 @@
   --modal-solid-bg: #00001f;
   --ele-bg-color: rgb(5, 2, 204);
   --ele-hover-bg-color: rgb(135, 135, 255);
-  --main-bg-color: rgb(48, 48, 255);
+  --main-bg-color: rgba(0, 0, 97, 0.8);
 
   /* --box-shadow: 1rem_1rem_2rem_rgba(0,0,0,0.25); */
 
@@ -64,7 +64,7 @@ body {
 .glowing{
   --glow-color: blue;
   --glow-spread-color: rgb(17, 17, 253);
-  --enhanced-glow-color: rgb(46, 46, 255);
+  --enhanced-glow-color: #2e2eff;
   --btn-color: rgb(0, 0, 113);
   border: 0.2em solid var(--glow-color);
   padding: 0.5em 1.3em;
