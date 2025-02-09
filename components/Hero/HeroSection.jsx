@@ -12,7 +12,7 @@ const HeroSection = () => {
                 <Image 
                 src={images.hero} 
                 alt='Hero section' 
-                className='w-[100%] lg:w-[90%]'
+                height={500}
                 />
             
             <div className='pr-8 sm:pr-24'>
