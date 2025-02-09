@@ -4,14 +4,13 @@ import images from "@/img"
 
 const ServiceSection = () => {
   return (
-    <div className='w-[95%] sm:w-[90%] mx-12 my-auto '>
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-12 text-center justify-items-center'>
-          <div className='flex flex-col items-center sm:gap-2'>
+    <div className='w-[95%] sm:w-[90%] mx-2 sm:mx-12 my-4 '>
+      <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-12 text-center justify-items-center'>
+          <div className='text-xs sm:text-base text-xs sm:text-base flex flex-col items-center sm:gap-2'>
             <Image 
               src={images.service1}
               alt = "Browse & Discover "
-              width={100}
-              height={100}
+              className="w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
               style={{ filter: 'drop-shadow(4px 4px 5px #0000ff98)' }}
             />
             <p className='my-4'>
@@ -21,12 +20,11 @@ const ServiceSection = () => {
             <p>Find unique NFTs from top creators. <br />
                No stress, just scroll.</p>
         </div>
-        <div className='flex flex-col items-center sm:gap-2'>
+        <div className='text-xs sm:text-base flex flex-col items-center sm:gap-2'>
             <Image 
               src={images.service2}
               alt = "Mint & Create"
-              width={100}
-              height={100}
+              className="w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
               style={{ filter: 'drop-shadow(4px 4px 5px #0000ff98)' }}
             />
             <p className='my-4'>
@@ -36,12 +34,11 @@ const ServiceSection = () => {
             <p>Turn your art into NFTs in a few clicks. <br />
                No coding needed.</p>
         </div>
-        <div className='flex flex-col items-center sm:gap-2'>
+        <div className='text-xs sm:text-base flex flex-col items-center sm:gap-2'>
             <Image 
               src={images.service3}
               alt = "Buy & Sell "
-              width={100}
-              height={100}
+              className="w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
               style={{ filter: 'drop-shadow(4px 4px 5px #0000ff98)' }}
             />
             <p className='my-4'>
@@ -51,12 +48,11 @@ const ServiceSection = () => {
             <p>Trade NFTs easily. <br />
                No complicated steps.</p>
         </div>
-        <div className='flex flex-col items-center sm:gap-2'>
+        <div className='text-xs sm:text-base flex flex-col items-center sm:gap-2'>
             <Image 
               src={images.service4}
               alt = "Track & Collect"
-              width={100}
-              height={100}
+              className="w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
               style={{ filter: 'drop-shadow(4px 4px 5px #0000ff98)' }}
             />
             <p className='my-4'>
