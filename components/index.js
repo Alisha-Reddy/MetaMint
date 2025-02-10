@@ -4,3 +4,4 @@ export { default as NavBar } from "./NavBar/NavBar";
 export { default as HeroSection} from "./Hero/HeroSection"
 export {default as ServiceSection} from "./ServiceSection/ServiceSection"
 export {default as NFTSlider} from "./NFTSlider/NFTSlider"
+export {default as Subscribe} from "./Subscribe/Subscribe"

@@ -9,7 +9,7 @@ import Button from "../Button/Button"
 import { initScriptLoader } from 'next/script'
 
 const NFTSlider = () => {
-    const [idNumber, setIdNumber] = useState(1)
+    const [idNumber, setIdNumber] = useState(0)
 
     const sliderData = [
         {
