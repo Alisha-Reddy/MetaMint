@@ -1,4 +1,11 @@
-import {HeroSection, ServiceSection, NFTSlider, Subscribe, Title} from "../components"
+import {
+  HeroSection, 
+  ServiceSection, 
+  NFTSlider, 
+  Subscribe, 
+  Title,
+  Category
+} from "../components"
 
 export default function Home() {
   return (
@@ -11,6 +18,7 @@ export default function Home() {
         heading="Browse by category"
         paragraph= "Explore the NFTs in the most featured categories."
       />
+      <Category />
     </main>
   );
 }
