@@ -7,7 +7,10 @@ export default function Home() {
       <ServiceSection/>
       <NFTSlider />
       <Subscribe />
-      <Title />
+      <Title
+        heading="Browse by category"
+        paragraph= "Explore the NFTs in the most featured categories."
+      />
     </main>
   );
 }
