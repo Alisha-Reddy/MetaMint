@@ -1,4 +1,4 @@
-import {HeroSection, ServiceSection, NFTSlider, Subscribe} from "../components"
+import {HeroSection, ServiceSection, NFTSlider, Subscribe, Title} from "../components"
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <ServiceSection/>
       <NFTSlider />
       <Subscribe />
+      <Title />
     </main>
   );
 }
