@@ -6,7 +6,15 @@ import images from "@/img"
 const Subscribe = () => {
   return (
     <div className='w-[95%] md:w-[90%] mb-8'>{/* subscribe */}
-        <div className='w-[85%] mx-auto grid grids-cols-2 md:grid-cols-[1.5fr_2fr] items-center'>{/* subscribe_box */}
+        <div className='w-[85%] mx-auto grid grids-cols-2 md:grid-cols-[2fr_1.5fr] gap-10 items-center justify-between'>{/* subscribe_box */}
+            <div>{/* subscribe_box_right */}
+                <Image
+                src={images.update}
+                alt='get update'
+                height={600}
+                width={800}
+                />
+            </div>
             <div>{/* subscribe_box_left */}
                 <h2 className='text-3xl mb-2 font-semibold'>Never miss a drop</h2>
                 <p className='text-lg'>Big things are coming! Subscribe to get early access, updates, and exclusive drops.  No spam, just vibes.</p>
@@ -27,14 +35,7 @@ const Subscribe = () => {
                 </div>
             </div>
 
-            <div>{/* subscribe_box_right */}
-                <Image
-                src={images.update}
-                alt='get update'
-                height={600}
-                width={800}
-                />
-            </div>
+            
         </div>
     </div>
   )
