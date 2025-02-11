@@ -10,7 +10,7 @@ import {
 } from "react-icons/ti"
 import {RiSendPlaneFill} from 'react-icons/ri'
 import images from '@/img'
-import { Discover, HelpCenter } from '../NavBar'
+import { Discover, HelpCenter } from './NavBar'
 
 const Footer = () => {
   return (

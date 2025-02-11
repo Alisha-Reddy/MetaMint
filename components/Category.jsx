@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import {BsCircleFill} from "react-icons/bs"
 import images from "@/img"
-import { Title } from '../index'
+import { Title } from '.'
 
 const Category = () => {
     const CategoryArray = [1, 2, 3, 4, 5, 6]

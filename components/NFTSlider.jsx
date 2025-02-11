@@ -5,8 +5,7 @@ import {AiFillFire, AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import {MdVerified, MdTimer} from 'react-icons/md'
 import {TbArrowBigLeftLines, TbArrowBigRightLines} from 'react-icons/tb'
 import images from "@/img"
-import Button from "../Button/Button"
-import { initScriptLoader } from 'next/script'
+import { Button } from '.'
 
 const NFTSlider = () => {
     const [idNumber, setIdNumber] = useState(0)

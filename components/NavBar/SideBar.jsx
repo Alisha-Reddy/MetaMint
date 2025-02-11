@@ -12,7 +12,7 @@ import {
   TiArrowSortedDown,
 } from "react-icons/ti"
 import images from "@/img"
-import Button from "@/components/Button/Button"
+import { Button } from '..'
 
 const SideBar = ({setSideMenu}) => {
   const [openDiscover, setOpenDiscover] = useState(false)
