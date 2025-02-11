@@ -9,8 +9,8 @@ const Category = () => {
   return (
     <div className='w-[90%] mx-auto flex flex-col gap-6'>
       <Title
-        heading="Browse by category"
-        paragraph= "Explore the NFTs in the most featured categories."
+        heading="Pick a category"
+        paragraph= "Art? Memes? Something cool? Take your pick."
       />
       <div className='grid sm:grid-cols-2 md:grid-cols-6 gap-8 '>
       
