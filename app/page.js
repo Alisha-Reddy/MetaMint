@@ -3,7 +3,8 @@ import {
   ServiceSection, 
   NFTSlider, 
   Subscribe, 
-  Category
+  Category,
+  Filter
 } from "../components"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <NFTSlider />
       <Subscribe />
       <Category />
+      <Filter />
     </main>
   );
 }
