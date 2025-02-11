@@ -3,7 +3,6 @@ import {
   ServiceSection, 
   NFTSlider, 
   Subscribe, 
-  Title,
   Category
 } from "../components"
 
@@ -14,10 +13,6 @@ export default function Home() {
       <ServiceSection/>
       <NFTSlider />
       <Subscribe />
-      <Title
-        heading="Browse by category"
-        paragraph= "Explore the NFTs in the most featured categories."
-      />
       <Category />
     </main>
   );
