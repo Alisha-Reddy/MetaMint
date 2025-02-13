@@ -4,7 +4,8 @@ import {
   NFTSlider, 
   Subscribe, 
   Category,
-  Filter
+  Filter,
+  NFTCard
 } from "../components"
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Subscribe />
       <Category />
       <Filter />
+      <NFTCard />
     </main>
   );
 }
