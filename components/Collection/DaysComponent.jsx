@@ -5,19 +5,19 @@ import images from "@/img";
 
 const DaysComponent = () => {
   return (
-    <div className="daysComponent">
+    <div className="w-[100%] rounded-2xl transition-all duration-300 ease-in cursor-pointer hover:shadow-[0px_px_10px_5px_var(--box-shadow)]">
       <div className="daysComponent_box">
-        <div className="daysComponent_box_img">
+        <div className="rounded-2xl">
           <Image
             src={images.creatorBackground1}
             alt="profile background"
             width={500}
             height={300}
-            className="w-full h-auto object-cover rounded-lg"
+            // className="w-full h-auto object-cover rounded-lg"
           />
         </div>
 
-        <div className="daysComponent_box_profile">
+        <div className="grid grid-cols-3 gap-1">
           {[...Array(3)].map((_, i) => (
             <Image
               key={i}
@@ -25,15 +25,15 @@ const DaysComponent = () => {
               alt={`profile ${i + 1}`}
               width={200}
               height={200}
-              className={`daysComponent_box_img_${i + 1} w-16 h-16 rounded-full object-cover border-2 border-white`}
+              className="rounded-2xl"
             />
           ))}
         </div>
 
-        <div className="daysComponent_box_title">
+        <div className="p-2">
           <h2 className="text-xl font-semibold">Amazing Collection</h2>
-          <div className="daysComponent_box_title_info flex justify-between items-center mt-2">
-            <div className="daysComponent_box_title_info_profile flex items-center space-x-2">
+          <div className="flex gap-1 items-center mt-2">
+            <div className="flex items-center justify-between">
               <Image
                 src={images.user1}
                 alt="profile"
