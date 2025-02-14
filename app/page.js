@@ -5,7 +5,8 @@ import {
   Subscribe, 
   Category,
   Filter,
-  NFTCard
+  NFTCard,
+  Collection
 } from "../components"
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Category />
       <Filter />
       <NFTCard />
+      <Collection />
     </main>
   );
 }
