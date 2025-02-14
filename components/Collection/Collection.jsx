@@ -1,99 +1,68 @@
-"use client"
-import React, { useState } from 'react'
-import {
-  BsFillAlarmFill,
-  BsFillCalendarDateFill,
-  BsCalendar3,
-} from "react-icons/bs";
-import { Title } from '..'
-import DaysComponent from './DaysComponent';
+"use client";
+import React, { useState } from "react";
+import { BsFillAlarmFill, BsFillCalendarDateFill, BsCalendar3 } from "react-icons/bs";
+import { Title } from "..";
+import DaysComponent from "./DaysComponent";
 
 const Collection = () => {
-  const [popular, setPopular] = useState(true)
-  const [following, setFollowing] = useState(false);
-  const [news, setNews] = useState(false);
+  const [activeTab, setActiveTab] = useState("popular");
 
-  const CardArray = [1, 2, 3, 4, 5, 6, 7, 8];
-  const followingArray = [1, 2, 3, 4];
-  const newsArray = [1, 2, 3, 4, 5, 6];
-
-  const openPopular = () => {
-    if (!popular) {
-      setPopular(true);
-      setFollowing(false);
-      setNews(false);
-    }
+  const data = {
+    popular: [1, 2, 3, 4, 5, 6, 7, 8],
+    following: [1, 2, 3, 4],
+    news: [1, 2, 3, 4, 5, 6]
   };
 
-  const openFollower = () => {
-    if (!following) {
-      setPopular(false);
-      setFollowing(true);
-      setNews(false);
-    }
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
   };
-
-  const openNews = () => {
-    if (!news) {
-      setPopular(false);
-      setFollowing(false);
-      setNews(true);
-    }
-  };
-
-  const Style = {
-
-  }
 
   return (
-    <div>
+    <div className="w-[95%] md:w-[90%] mx-auto">
       <Title 
-        heading="HEading"
-        paragraph="PAragraph"
+        heading="Flex Game Strong!"
+        paragraph="Peek at the champs. Feel the FOMO."
       />
-      <div className={Style.collection}>
-      <div className={Style.collection_title}>
-        <h2>Top List Creators</h2>
-        <div className={Style.collection_collections}>
-          <div className={Style.collection_collections_btn}>
-            <button onClick={() => openPopular()}>
-              <BsFillAlarmFill /> 24 hours
-            </button>
-            <button onClick={() => openFollower()}>
-              <BsCalendar3 /> 7 days
-            </button>
-            <button onClick={() => openNews()}>
-              <BsFillCalendarDateFill /> 30 days
-            </button>
+
+
+      <div className="w-[100%] py-3 pb-10">
+        <div className="w-96 mx-auto py-6 text-center">
+          <h2 className="text-5xl mb-4">Top List Creators</h2>
+          <div className="collection_collections">
+            <div className="bg-[var(--main-bg-color)] p-1 rounded-full flex justify-around items-center gap-4 text-lg shadow- ">
+              <button
+                onClick={() => handleTabChange("popular")}
+                // className={activeTab === "popular" ? "active" : ""}
+                className="bg-[var(--icons-color)] text-[var(--main-bg-color)] p-4 rounded-full cursor-pointer border border-[var(--icons-color)] transition-all duration-300 ease-in hover:bg-transparent hover:text-[var(--icons-color)]"
+              >
+                <BsFillAlarmFill /> 24 hours
+              </button>
+              <button
+                onClick={() => handleTabChange("following")}
+                // className={activeTab === "following" ? "active" : ""}
+                className="bg-[var(--icons-color)] text-[var(--main-bg-color)] p-4 rounded-full cursor-pointer border border-[var(--icons-color)] transition-all duration-300 ease-in hover:bg-transparent hover:text-[var(--icons-color)]"
+              >
+                <BsCalendar3 /> 7 days
+              </button>
+              <button
+                onClick={() => handleTabChange("news")}
+                // className={activeTab === "news" ? "active" : ""}
+                className="bg-[var(--icons-color)] text-[var(--main-bg-color)] p-4 rounded-full cursor-pointer border border-[var(--icons-color)] transition-all duration-300 ease-in hover:bg-transparent hover:text-[var(--icons-color)]"
+              >
+                <BsFillCalendarDateFill /> 30 days
+              </button>
+            </div>
           </div>
         </div>
+
+        <div className="w-[80%] mx-auto grid grid-cols-3 gap-8">
+          {data[activeTab].map((el, i) => (
+            <DaysComponent key={i} />
+          ))}
+        </div>
       </div>
-      {popular && (
-        <div className={Style.collection_box}>
-          {CardArray.map((el, i) => (
-            <DaysComponent key={i + 1} />
-          ))}
-        </div>
-      )}
-
-      {following && (
-        <div className={Style.collection_box}>
-          {followingArray.map((el, i) => (
-            <DaysComponent key={i + 1} />
-          ))}
-        </div>
-      )}
-
-      {news && (
-        <div className={Style.collection_box}>
-          {newsArray.map((el, i) => (
-            <DaysComponent key={i + 1} />
-          ))}
-        </div>
-      )}
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Collection
+export default Collection;

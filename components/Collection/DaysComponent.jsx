@@ -1,86 +1,62 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
 import { MdVerified } from "react-icons/md";
-import images from "@/img"
+import images from "@/img";
 
 const DaysComponent = () => {
-  const Style = {
-
-  }
-  
   return (
-    <div className={Style.daysComponent}>
-      <div className={Style.daysComponent_box}>
-        <div className={Style.daysComponent_box_img}>
+    <div className="daysComponent">
+      <div className="daysComponent_box">
+        <div className="daysComponent_box_img">
           <Image
             src={images.creatorBackground1}
-            className={Style.daysComponent_box_img_img}
             alt="profile background"
             width={500}
             height={300}
-            objectFit="covers"
+            className="w-full h-auto object-cover rounded-lg"
           />
         </div>
 
-        <div className={Style.daysComponent_box_profile}>
-          <Image
-            src={images.creatorBackground2}
-            alt="profile"
-            width={200}
-            height={200}
-            className={Style.daysComponent_box_img_1}
-            objectFit="covers"
-          />
-          <Image
-            src={images.creatorBackground2}
-            alt="profile"
-            width={200}
-            height={200}
-            className={Style.daysComponent_box_img_2}
-            objectFit="covers"
-          />
-          <Image
-            src={images.creatorBackground2}
-            alt="profile"
-            width={200}
-            height={200}
-            className={Style.daysComponent_box_img_3}
-            objectFit="covers"
-          />
+        <div className="daysComponent_box_profile">
+          {[...Array(3)].map((_, i) => (
+            <Image
+              key={i}
+              src={images.creatorBackground2}
+              alt={`profile ${i + 1}`}
+              width={200}
+              height={200}
+              className={`daysComponent_box_img_${i + 1} w-16 h-16 rounded-full object-cover border-2 border-white`}
+            />
+          ))}
         </div>
 
-        <div className={Style.daysComponent_box_title}>
-          <h2>Amazing Collection</h2>
-          <div className={Style.daysComponent_box_title_info}>
-            <div className={Style.daysComponent_box_title_info_profile}>
+        <div className="daysComponent_box_title">
+          <h2 className="text-xl font-semibold">Amazing Collection</h2>
+          <div className="daysComponent_box_title_info flex justify-between items-center mt-2">
+            <div className="daysComponent_box_title_info_profile flex items-center space-x-2">
               <Image
                 src={images.user1}
                 alt="profile"
                 width={30}
                 height={30}
-                objectFit="covers"
-                className={Style.daysComponent_box_title_info_profile_img}
+                className="rounded-full"
               />
-
-              <p>
+              <p className="text-sm text-gray-700">
                 Creator
-                <span>
-                  Shoaib Bhai
-                  <small>
-                    <MdVerified />
-                  </small>
+                <span className="flex items-center space-x-1">
+                  <span className="font-semibold">Shoaib Bhai</span>
+                  <MdVerified className="text-blue-500" />
                 </span>
               </p>
             </div>
-
-            <div className={Style.daysComponent_box_title_info_price}>
-              <small>1.255 ETH</small>
+            <div className="daysComponent_box_title_info_price">
+              <small className="text-gray-500">1.255 ETH</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DaysComponent
+export default DaysComponent;
