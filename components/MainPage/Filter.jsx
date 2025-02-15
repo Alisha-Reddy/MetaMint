@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import {
     FaFilter, 
@@ -14,8 +13,7 @@ import {
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { MdVerified } from 'react-icons/md'
 import { TiTick } from 'react-icons/ti'
-
-import { Title } from '.'
+import { Title } from '../index'
 
 const FilterButton = ({ label, onClick }) => (
     <button 
@@ -41,7 +39,7 @@ const Filter = () => {
     ];
 
     return (
-        <div className="w-[90%] mx-auto flex flex-col gap-6 pb-5 md:pb-10 mt-8">
+        <div className="w-[85%] mx-auto my-4 flex flex-col gap-6 mt-10">
             <Title heading="Cool NFTs Here" paragraph="Some are awesome. Some are weird. You decide." />
 
             <div>

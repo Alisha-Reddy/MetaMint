@@ -4,7 +4,7 @@ import images from "@/img"
 
 const ServiceSection = () => {
   return (
-    <div className='w-[95%] sm:w-[90%] mx-2 sm:mx-12 my-4 '>
+    <div className='w-[95%] sm:w-[90%] mx-auto  my-4 sm:my-14'>
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-12 text-center justify-items-center'>
           <div className='text-xs sm:text-base flex flex-col items-center sm:gap-2'>
             <Image 

@@ -2,11 +2,11 @@
 import React from 'react'
 import Image from 'next/image'
 import images from "@/img"
-import { Button } from '.'
+import { Button } from '../index'
 
 const HeroSection = () => {
   return (
-    <div className='w-[90%] mx-7 my-4 sm:my-10'>
+    <div className='w-[90%] md:w-[95%] mx-auto my-4 sm:my-14'>
         <div className='grid sm:grid-cols-2 gap-4 sm:gap-8 justify-items-center justify-center items-center text-center'>
             
                 <Image 

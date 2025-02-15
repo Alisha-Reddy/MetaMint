@@ -5,7 +5,7 @@ import {AiFillFire, AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import {MdVerified, MdTimer} from 'react-icons/md'
 import {TbArrowBigLeftLines, TbArrowBigRightLines} from 'react-icons/tb'
 import images from "@/img"
-import { Button } from '.'
+import { Button } from '../index'
 
 const NFTSlider = () => {
     const [idNumber, setIdNumber] = useState(0)
@@ -94,7 +94,7 @@ const NFTSlider = () => {
     // },[])
 
   return (
-        <div className=' w-[95%] mx-auto p-4  sm:py-28 sm:px-12 md:grid md:grid-cols-[repeat(12,1fr)] items-center sm:gap-0'>{/* bigNFTSlider_box */}
+        <div className=' w-[90%] md:w-[95%] mx-auto my-4 sm:my-14 md:grid md:grid-cols-[repeat(12,1fr)] items-center sm:gap-0'>{/* bigNFTSlider_box */}
             <div className=' md:col-start-4 md:col-end-8 md:row-start-1 md:row-end-[- 1] bg-[var(--main-bg-color)] shadow-[5px_5px_20px] shadow-[var(--shadow-light-color)] rounded-2xl p-4 md:p-8 z-10 h-[60vh] md:h-[68vh]'>{/* bigNFTSlider_box_left */}
                 <h2 className='text-2xl md:text-5xl font-bold'>{sliderData[idNumber].title}</h2>
 

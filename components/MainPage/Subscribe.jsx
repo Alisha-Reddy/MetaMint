@@ -5,7 +5,7 @@ import images from "@/img"
 
 const Subscribe = () => {
   return (
-    <div className='w-[95%] md:w-[90%] mb-8'>
+    <div className='w-[90%] md:w-[95%] mx-auto my-4 sm:my-14'>
         <div className='w-[85%] mx-auto grid grids-cols-2 md:grid-cols-[2fr_1.5fr] gap-10 items-center justify-between'>{/* subscribe_box */}
             <div>
                 <Image
