@@ -29,7 +29,7 @@ const Collection = () => {
         <div className=" w-full md:w-[430px] pb-10 mx-auto  text-center items-center">
           <h2 className="text-xl md:text-5xl mb-4">Top List Creators</h2>
           <div>
-            <div className="bg-[var(--main-bg-color)] py-2 px-1 rounded-full flex justify-between items-center gap-1 md:gap-4 text-sm md:text-lg shadow-[0px_5px_20px_blue]">
+            <div className="bg-[var(--main-bg-color)] py-2 px-1 rounded-full flex justify-between items-center gap-1 md:gap-4 text-sm md:text-lg shadow-[3px_5px_20px_blue]">
               <button
                 onClick={() => handleTabChange("popular")}
                 className={`p-2 flex justify-center items-center gap-1 rounded-full cursor-pointer transition-all duration-300 ease-in  ${
