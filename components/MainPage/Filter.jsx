@@ -17,7 +17,7 @@ import { Title } from '../index'
 
 const FilterButton = ({ label, onClick }) => (
     <button 
-    className="px-2 md:px-6 py-2 rounded-3xl border border-[var(--shadow-light-color)] text-xs md:text-xl cursor-pointer transition-all duration-300 ease-in z-20 hover:shadow-[0px_0px_7px_2px_blue] hover:animate-bounce"
+    className="px-2 md:px-6 py-2 rounded-3xl border border-[var(--shadow-light-color)] text-xs md:text-xl float"
     onClick={onClick}
     >
         {label}
@@ -52,7 +52,7 @@ const Filter = () => {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-2 p-4 w-full md:w-32 justify-center bg-transparent cursor-pointer rounded-xl shadow-[0px_00px_10px_blue]" onClick={() => setFilterMenu(prev => !prev)}>
+                    <div className="flex items-center gap-2 p-4 w-full md:w-32 justify-center bg-transparent cursor-pointer rounded-xl shadow-[0px_00px_10px_blue] shine" onClick={() => setFilterMenu(prev => !prev)}>
                         <FaFilter />
                         <span>Filter</span> 
                         {filterMenu ? <FaAngleDown /> : <FaAngleUp />}

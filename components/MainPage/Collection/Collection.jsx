@@ -9,12 +9,12 @@ import { Title } from "../..";
 import DaysComponent from "./DaysComponent";
 
 const Collection = () => {
-  const [activeTab, setActiveTab] = useState("popular");
+  const [activeTab, setActiveTab] = useState("day");
 
   const data = {
-    popular: [1, 2, 3, 4, 5, 6, 7, 8],
-    following: [1, 2, 3, 4],
-    news: [1, 2, 3, 4, 5, 6],
+    day: [1, 2, 3, 4, 5, 6, 7, 8],
+    week: [1, 2, 3, 4],
+    month: [1, 2, 3, 4, 5, 6],
   };
 
   const handleTabChange = (tab) => {
@@ -31,31 +31,31 @@ const Collection = () => {
           <div>
             <div className="bg-[var(--main-bg-color)] py-2 px-1 rounded-full flex justify-between items-center gap-1 md:gap-4 text-sm md:text-lg shadow-[3px_5px_20px_blue]">
               <button
-                onClick={() => handleTabChange("popular")}
+                onClick={() => handleTabChange("day")}
                 className={`p-2 flex justify-center items-center gap-1 rounded-full cursor-pointer transition-all duration-300 ease-in  ${
-                  activeTab === "popular"
-                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)]  scale-105"
-                    : "bg-transparent text-[var(--icons-color)]"
+                  activeTab === "day"
+                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)] shadow-[0_0_10px_var(--icons-color)]"
+                  : "bg-transparent text-[var(--icons-color)] hover:scale-110"
                 }`}
               >
                 <BsFillAlarmFill /> 24 hours
               </button>
               <button
-                onClick={() => handleTabChange("following")}
+                onClick={() => handleTabChange("week")}
                 className={`p-2 flex justify-center items-center gap-1 rounded-full cursor-pointer transition-all duration-300 ease-in  ${
-                  activeTab === "following"
-                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)]  scale-105"
-                    : "bg-transparent text-[var(--icons-color)]"
+                  activeTab === "week"
+                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)] shadow-[0_0_10px_var(--icons-color)]"
+                  : "bg-transparent text-[var(--icons-color)] hover:scale-110"
                 }`}
               >
                 <BsCalendar3 /> 7 days
               </button>
               <button
-                onClick={() => handleTabChange("news")}
+                onClick={() => handleTabChange("month")}
                 className={`p-2 flex justify-center items-center gap-1 rounded-full cursor-pointer transition-all duration-300 ease-in  ${
-                  activeTab === "news"
-                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)]  scale-105"
-                    : "bg-transparent text-[var(--icons-color)]"
+                  activeTab === "month"
+                    ? "bg-[var(--icons-color)] text-[var(--main-bg-color)] shadow-[0_0_10px_var(--icons-color)]"
+                  : "bg-transparent text-[var(--icons-color)] hover:scale-110"
                 }`}
               >
                 <BsFillCalendarDateFill /> 30 days
