@@ -6,7 +6,8 @@ import {
   Category,
   Filter,
   NFTCard,
-  Collection
+  Collection,
+  FollowerTab
 } from "../components"
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Filter />
       <NFTCard />
       <Collection />
+      <FollowerTab />
     </main>
   );
 }

@@ -10,3 +10,4 @@ export {default as Category} from "./MainPage/Category"
 export{default as Filter} from './MainPage/Filter'
 export {default as NFTCard} from './MainPage/NFTCard'
 export {default as Collection} from './MainPage/Collection/Collection'
+export {default as FollowerTab} from "./MainPage/FollowerTab"
