@@ -61,8 +61,8 @@ const FollowerTab = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {data[activeTab].map((el, i) => (
-          <FollowerCard key={i + 1} i={i} el={el} />
+        {data[activeTab].map(i => (
+          <FollowerCard key={i} i={i}  />
         ))}
       </div>
 
