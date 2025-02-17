@@ -7,13 +7,12 @@ const LikeProfile = () => {
     return (
       <div className="flex justify-start">
         {imageArray.map((el, i) => (
-          <div className="border-2 border-[var(--icons-color)] rounded-full" key={i + 1}>
+          <div className="w-6 h-6 border-2 border-[var(--icons-color)] rounded-full" key={i + 1}>
             <Image
               src={el}
-              width={15}
-              height={15}
+              alt="users"
               key={i + 1}
-              className="rounded-full"
+              className="rounded-full object-cover w-full h-full"
             />
           </div>
         ))}

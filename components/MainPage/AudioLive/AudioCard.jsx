@@ -9,67 +9,71 @@ import LikeProfile from "./LikeProfile";
 const AudioCard = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
+  const Style ={}
 
   return (
-    <div className="grid grid-cols-5 grid-rows-[repeat(6,_4rem)] gap-4 overflow-hidden transition-all duration-300 ease-in rounded-2xl shadow-md hover:shadow-lg bg-white p-4 relative">
-      {/* Like & Time */}
-      <div className="col-span-5 row-span-1 flex justify-between items-center z-10 p-4">
-        <div 
-          className="bg-gray-200 text-gray-700 flex items-center gap-2 p-4 rounded-2xl cursor-pointer hover:bg-gray-300"
+    <div className="relative grid grid-cols-5 grid-rows-[repeat(6,_4rem)] gap-4 overflow-hidden transition-all duration-300 ease-in rounded-2xl hover:shadow-[var(--box-shadow)]">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={images.creatorBackground10}
+          alt="background"
+          fill
+          className="object-cover w-full h-full transition-transform duration-300 hover:scale-110 rounded-2xl"
+        />
+      </div>
+
+      {/* Like Button Section */}
+      <div className="col-span-full row-start-1 row-end-2 flex justify-between z-10 ">
+        <div
+          className="bg-[var(--bg-color)]  flex items-center gap-2 p-4 rounded-2xl cursor-pointer m-4 overflow-hidden"
           onClick={() => setLike(!like)}
         >
           {like ? (
-            <AiFillHeart className="text-red-500 text-2xl" />
+            <AiFillHeart className="text-2xl text-red-600" />
           ) : (
-            <AiOutlineHeart className="text-gray-700 text-2xl" />
+            <AiOutlineHeart className="text-2xl" />
           )}
-          <span className="font-semibold">24</span>
+          <span className="text-xl">24</span>
         </div>
-        <div className="bg-black text-white py-2 px-10 skew-x-[35deg] rounded-bl-lg">
-          <div className="-skew-x-[35deg] text-center">
-            <small className="font-medium">Remaining time</small>
-            <h5 className="text-lg mt-2">3h : 15m : 20s</h5>
+
+        {/* Remaining Time */}
+        <div className="bg-[var(--bg-color)] px-5 skew-x-[20deg] rounded-bl-xl -mr-2">
+          <div className="transform skew-x-[-20deg]">
+            <small className="font-bold">Remaining Time</small>
+            <h5 className="text-xl ">3h : 15m : 20s</h5>
           </div>
         </div>
       </div>
 
-      {/* Player */}
-      <div className="col-span-5 row-start-4 flex justify-center items-center gap-8 z-10 px-12">
-        <Image src={images.musicwave} alt="music" width={200} />
-        <div 
-          className="p-6 rounded-full bg-gray-200 text-gray-700 text-2xl cursor-pointer hover:bg-gray-300"
-          onClick={() => setPlay(!play)}
-        >
-          {play ? <TbPlayerPause /> : <TbPlayerPlay />}
-        </div>
+
+      {/* Music Player Section */}
+      <div className="col-span-full row-start-4 row-end-5 flex pr-8 gap-6 z-20 items-center justify-between">
+        <Image src={images.musicwave} alt="music"  className="opacity-50 flex-1 w-full h-full" />
+        
+          <div className="p-2 flex items-center rounded-full bg-[var(--icons-color)] text-[var(--main-bg-color)] text-4xl cursor-pointer" onClick={() => setPlay(!play)}>
+            {play ? <TbPlayerPause /> : <TbPlayerPlay />}
+          </div>
       </div>
 
-      {/* Background Image */}
-      <Image 
-        src={images.creatorBackground1} 
-        alt="background" 
-        layout="fill" 
-        objectFit="cover" 
-        className="col-span-5 row-span-6 rounded-2xl opacity-50" 
-      />
-
-      {/* Details */}
-      <div className="col-span-5 row-start-5 flex justify-between items-center bg-black text-white p-6 w-[90%] rounded-tr-2xl z-10">
+      {/* NFT Details Section */}
+      <div className="col-span-full row-start-5 row-end-[-1] z-10 flex items-center justify-between bg-[var(--bg-color)] py-2 px-8 w-[90%] rounded-tr-[2rem]">
         <div>
-          <h4 className="text-lg font-bold">NFT music #1123</h4>
-          <div className="mt-2 flex items-center gap-2">
-            <div className="border border-gray-400 p-2 rounded-lg cursor-pointer">
-              <small className="bg-gray-400 text-black px-2 py-1 rounded">Price</small>
-              <p className="font-bold mt-1">$3,221.33</p>
-            </div>
+          <h4 className="text-xl font-extrabold">NFT Music #1123</h4>
+          <div className="relative mt-4 border border-[var(--icons-color)] pt-2  rounded-lg h-12 cursor-pointer">
+            <p className="bg-[var(--bg-color)] font-semibold p-1 rounded-lg absolute -top-4 right-4">Price</p>
+            <p className="font-bold ml-3">$3,221.33</p>
           </div>
         </div>
-        <div className="text-right grid">
+
+        <div className="text-end grid">
           <LikeProfile />
-          <small className="mt-4">24 in stock</small>
+          <small className="mt-2">24 in stock</small>
         </div>
-      </div>
     </div>
+</div>
+
+
   );
 };
 
