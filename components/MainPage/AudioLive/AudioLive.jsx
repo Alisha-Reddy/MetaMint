@@ -4,6 +4,7 @@ import AudioCard from './AudioCard'
 import AudioCardSmall from './AudioCardSmall'
 
 const AudioLive = () => {
+  const Style = {}
   return (
     <div>
         <Title 
