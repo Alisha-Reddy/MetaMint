@@ -3,7 +3,6 @@ import Image from 'next/image'
 import images from "@/img"
 
 const LikeProfile = () => {
-    const Style = {}
     const imageArray = [images.user1, images.user2, images.user3, images.user4];
     return (
       <div className="flex justify-start">
