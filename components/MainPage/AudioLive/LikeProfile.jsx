@@ -6,15 +6,15 @@ const LikeProfile = () => {
     const Style = {}
     const imageArray = [images.user1, images.user2, images.user3, images.user4];
     return (
-      <div className={Style.like}>
+      <div className="flex justify-start">
         {imageArray.map((el, i) => (
-          <div className={Style.like_box} key={i + 1}>
+          <div className="border-2 border-[var(--icons-color)] rounded-full" key={i + 1}>
             <Image
               src={el}
               width={15}
               height={15}
               key={i + 1}
-              className={Style.like_box_img}
+              className="rounded-full"
             />
           </div>
         ))}

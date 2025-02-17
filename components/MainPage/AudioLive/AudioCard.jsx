@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, {useState} from 'react'
 import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
@@ -8,6 +9,7 @@ import LikeProfile from './LikeProfile';
 const AudioCard = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
+  const Style = {}
 
   return (
     <div className={Style.audioCard}>
@@ -34,7 +36,7 @@ const AudioCard = () => {
         </div>
 
         <div className={Style.audioCard_box_player}>
-          <Image src={images.musicwave} alt="musice" width={200} />
+          <Image src={images.musicwave} alt="music" width={200} />
           <div
             className={Style.audioCard_box_musicPlayer}
             onClick={() => setPlay(prev => !prev)}
@@ -68,7 +70,7 @@ const AudioCard = () => {
 
         <div className={Style.audioCard_box_img}>
           <Image
-            src={images.creatorbackground10}
+            src={images.creatorBackground1}
             alt="background"
             width={500}
             height={500}
