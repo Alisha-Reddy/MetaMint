@@ -14,11 +14,6 @@
   --ele-hover-bg-color: rgb(135, 165, 255);
   --main-bg-color: rgba(0, 0, 97, 0.8);
   --bg-color: #00001f;
-
-  /* --box-shadow: 1rem_1rem_2rem_rgba(0,0,0,0.25); */
-
-  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color), 
-                  -.3rem -.3rem 1rem var(--shadow-dark-color);
 }
 
 *{
