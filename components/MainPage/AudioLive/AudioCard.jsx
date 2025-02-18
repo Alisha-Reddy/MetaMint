@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 import images from "@/img";
-import LikeProfile from "./LikeProfile";
+import LikeProfile from "../LikeProfile";
 
 const AudioCard = () => {
   const [like, setLike] = useState(false);

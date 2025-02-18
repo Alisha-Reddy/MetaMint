@@ -8,7 +8,8 @@ import {
   NFTCard,
   Collection,
   FollowerTab,
-  AudioLive
+  AudioLive,
+  Slider
 } from "../components"
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <AudioLive />
       <FollowerTab />
       <Collection />
+      <Slider />
     </main>
   );
 }

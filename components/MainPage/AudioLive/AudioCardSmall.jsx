@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 import images from "@/img";
-import LikeProfile from "./LikeProfile";
+import LikeProfile from "../LikeProfile";
 
 const AudioCardSmall = () => {
   const [play, setPlay] = useState(false);

@@ -12,3 +12,4 @@ export {default as NFTCard} from './MainPage/NFTCard'
 export {default as Collection} from './MainPage/Collection/Collection'
 export {default as FollowerTab} from "./MainPage/FollowerTab/FollowerTab"
 export {default as AudioLive} from "./MainPage/AudioLive/AudioLive"
+export {default as Slider} from "./MainPage/Slider/Slider"
