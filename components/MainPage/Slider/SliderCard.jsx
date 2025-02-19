@@ -6,7 +6,7 @@ import images from "@/img"
 
 const SliderCard = () => {
     return (
-    <motion.div className="p-4 md:p-4 sm:p-2 w-96 ">
+    <motion.div className="py-4 px-2 md:py-4 sm:py-2 w-60 md:w-full bg-[--bg-color] rounded-2xl">
       <div className="transition-all duration-300 ease-in rounded-2xl pb-4 hover:shadow-[var(--box-shadow)]">
         <motion.div>
           <Image
@@ -26,7 +26,7 @@ const SliderCard = () => {
 
         <div className="flex justify-between mt-4 text-right ">
           <div className="relative border border-[var(--icons-color)] rounded-sm">
-            <small className="bg-[var(--icons-color)] text-[var(--main-bg-color)] absolute -top-2 right-1 rounded-sm">Current Bid</small>
+            <small className="bg-[--bg-color] text-[var(--icons-color)] px-1 absolute -top-2 right-1 rounded-sm">Current Bid</small>
             <p className="text-xl font-bold pt-3">1.000 ETH</p>
           </div>
 
