@@ -32,7 +32,7 @@ const SliderCard = () => {
 
           <div className="grid items-end">
             <small>Reaming time</small>
-            <p className="text-xl font-bold">3h : 15m : 20s</p>
+            <p className="text-xl font-bold">3h : 15m : 20s</p> 
           </div>
         </div>
       </div>
