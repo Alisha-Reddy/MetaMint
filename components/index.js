@@ -14,3 +14,4 @@ export {default as FollowerTab} from "./MainPage/FollowerTab/FollowerTab"
 export {default as AudioLive} from "./MainPage/AudioLive/AudioLive"
 export {default as Slider} from "./MainPage/Slider/Slider"
 export {default as Brand} from './MainPage/Brand'
+export {default as Video} from './MainPage/Video'

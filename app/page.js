@@ -10,7 +10,8 @@ import {
   FollowerTab,
   AudioLive,
   Slider,
-  Brand
+  Brand,
+  Video
 } from "../components"
 
 export default function Home() {
@@ -27,7 +28,8 @@ export default function Home() {
       <FollowerTab />
       <Collection />
       <Slider />
-      <Brand />
+      {/* <Brand /> */}
+      <Video />
     </main>
   );
 }
