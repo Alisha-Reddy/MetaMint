@@ -7,6 +7,7 @@ import nft1 from "./nft-1.png"
 import nftImage1 from "./nft-image-1.png"
 import nftImage2 from "./nft-image-2.png"
 import nftImage3 from "./nft-image-3.png"
+import nftVideo from "./nft_Video.png"
 import service1 from "./service-1.png"
 import service2 from "./service-2.png"
 import service3 from "./service-3.png"
@@ -57,6 +58,7 @@ export default{
     nftImage1,
     nftImage2,
     nftImage3,
+    nftVideo,
     service1,
     service2,
     service3,
