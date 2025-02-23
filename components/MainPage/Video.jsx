@@ -13,7 +13,7 @@ const Video = () => {
         Watch, collect, and own exclusive video NFTs! <br/>
         Discover epic moments, rare clips, and digital collectibles that are truly one of a kind. <br/>
         Ready to level up your collection?  
-        </p>
+        </p> 
 
         <div className="p-4 sm:p-20 md:p-40 mt-6 sm:mt-10">
             
