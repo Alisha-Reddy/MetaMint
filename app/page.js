@@ -4,15 +4,17 @@ import {
   NFTSlider, 
   Subscribe, 
   Category,
-  Filter,
   NFTCard,
   Collection,
   FollowerTab,
   AudioLive,
-  Slider,
-  Brand,
   Video
-} from "../components"
+} from "@/components/MainPage"
+import{
+  Brand,
+  Slider,
+  Filter,
+} from "@/components"
 
 export default function Home() {
   return (

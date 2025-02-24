@@ -13,7 +13,7 @@ import {
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { MdVerified } from 'react-icons/md'
 import { TiTick } from 'react-icons/ti'
-import { Title } from '../index'
+import { Title } from './index'
 
 const FilterButton = ({ label, onClick }) => (
     <button 

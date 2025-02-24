@@ -1,4 +1,6 @@
 import React from 'react'
+import images from "@/img"
+
 
 const page = () => {
   return (
