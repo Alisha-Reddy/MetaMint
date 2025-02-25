@@ -7,7 +7,7 @@ import { Button } from '.'
 const Brand = () => {
   return (
     <div>
-      <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-[5rem] items-center">
+      <div className="my-4 sm:my-14 grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-[5rem] items-center">
         <div>
           <Image src={images.logo} alt="brand logo" width={100} height={100} />
           <h1 className="text-[5rem] leading-[1.3] font-bold md:text-[2.5rem]">Collect, Trade & Earn Crypto with MetaMint!</h1>
