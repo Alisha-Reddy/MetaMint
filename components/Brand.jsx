@@ -5,22 +5,21 @@ import images from "@/img"
 import { Button } from '.'
 
 const Brand = () => {
-  const Style = {}
   return (
-    <div className={Style.Brand}>
-      <div className={Style.Brand_box}>
-        <div className={Style.Brand_box_left}>
+    <div>
+      <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-[5rem] items-center">
+        <div>
           <Image src={images.logo} alt="brand logo" width={100} height={100} />
-          <h1>Earn free crypto with Ciscrypt</h1>
-          <p>A creative agency that lead and inspire.</p>
+          <h1 className="text-[5rem] leading-[1.3] font-bold md:text-[2.5rem]">Collect, Trade & Earn Crypto with MetaMint!</h1>
+          <p className="text-[1.3rem] mt-[-2rem] md:mt-[-0.5rem]">ump into the world of NFTs! Buy, sell, and discover rare digital treasures.</p>
 
-          <div className={Style.Brand_box_left_btn}>
+          <div className='flex justify-between items-center mt-4 sm:mx-4'>
             <Button btnName="Create"  handleClick={()=>{}}/>
             <Button btnName="Discover"  handleClick={()=>{}}/>
           </div>
         </div>
-        <div className={Style.Brand_box_right}>
-          <Image src={images.earn} alt="brand logo" width={800} height={600} />
+        <div>
+          <Image src={images.eran} alt="brand logo" width={800} height={600} />
         </div>
       </div>
     </div>

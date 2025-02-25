@@ -56,7 +56,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="w-[85%]  mx-auto my-4 sm:my-14">
+    <div className="my-4 sm:my-14">
       <div>
         <h2 className="text-5xl md:text-2xl">Explore NFTs Video</h2>
 

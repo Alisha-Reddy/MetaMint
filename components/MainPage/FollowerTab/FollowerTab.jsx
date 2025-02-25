@@ -21,7 +21,7 @@ const FollowerTab = () => {
   };
 
   return (
-    <div className="w-[85%] mx-auto my-4 sm:my-14">
+    <div className="my-4 sm:my-14">
       <div className="w-full md:w-[430px] pb-10 mx-auto text-center">
         <h2 className="text-xl md:text-5xl mb-4">Top List Creators</h2>
         <div>

@@ -7,7 +7,7 @@ import { Title } from '../index'
 const Category = () => {
     const CategoryArray = [1, 2, 3, 4, 5, 6]
   return (
-    <div className='w-[85%] mx-auto my-4 sm:my-14 flex flex-col gap-6'>
+    <div className='my-4 sm:my-14 flex flex-col gap-6'>
       <Title
         heading="Pick a category"
         paragraph= "Art? Memes? Something cool? Take your pick."

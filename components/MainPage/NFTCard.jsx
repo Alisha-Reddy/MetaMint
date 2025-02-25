@@ -10,7 +10,7 @@ const NFTCard = () => {
   const [like, setLike] = useState(true);
 
   return (
-    <div className="w-[85%] grid sm:grid-cols-2 md:grid-cols-3 gap-12 my-4 sm:mb-10 mx-auto">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 my-4 sm:mb-10 mx-auto">
       {featureArray.map(el => (
         <div className="bg-[var(--bg-color)] p-2 sm:p-4 rounded-2xl grid grid-cols-4 cursor-pointer transition-all duration-300 ease-in hover:shadow-[0px_0px_20px_7px_var(--shadow-light-color)] relative overflow-hidden" key={el}>
   

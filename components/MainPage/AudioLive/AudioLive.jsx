@@ -5,7 +5,7 @@ import AudioCardSmall from './AudioCardSmall'
 
 const AudioLive = () => {
   return (
-    <div className='w-[90%] mx-auto my-4 sm:my-14'>
+    <div className='my-4 sm:my-14'>
       <Title 
         heading="Tune In, Collect On!" 
         paragraph="Dive into the sounds of the future. Discover NFTs that hit all the right notes!" 
