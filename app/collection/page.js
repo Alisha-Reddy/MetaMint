@@ -17,14 +17,16 @@ const page = () => {
   ];
 
   return (
-    <div className='w-[90%] md:w-[95%] mx-auto my-4 sm:my-14'>
+    <div>
       <Banner bannerImage={images.creatorBackground1} />
-      <CollectionProfile />
-      <Filter />
-      <NFTCard NFTData={collectionArray} />
+      <div className='w-[90%] md:w-[95%] mx-auto my-4 sm:my-14'>
+        <CollectionProfile />
+        <Filter />
+        <NFTCard NFTData={collectionArray} />
 
-      <Slider />
-      <Brand />
+        <Slider />
+        <Brand />
+      </div>
     </div>
   )
 }

@@ -11,7 +11,7 @@ import images from "@/img"
 const CollectionProfile = () => {
   const cardArray = [1, 2, 3, 4];
   return (
-    <div className="mx-auto grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 items-center bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] rounded-xl p-4 md:p-8">
+    <div className="bg-white mx-auto grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 items-center bg-[var(--main-bg-color)] shadow-[var(--box-shadow)] rounded-xl p-4 md:p-8">
       <div className="flex flex-col items-center">
         <Image
           src={images.nftImage1}
