@@ -1,3 +1,3 @@
-import {export as banner} from "./Banner"
-import {export as collectionProfile} from "./CollectionProfile"
-import {export as nftCard} from "./NFTCard"
+export {default as Banner} from "./Banner"
+export {default as CollectionProfile} from "./CollectionProfile"
+export {default as NFTCard} from "./NFTCard"

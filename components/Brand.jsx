@@ -1,7 +1,8 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import images from "@/img"
-import {Button} from "@/components/Button"
+import { Button } from '.'
 
 const Brand = () => {
   const Style = {}
@@ -14,8 +15,8 @@ const Brand = () => {
           <p>A creative agency that lead and inspire.</p>
 
           <div className={Style.Brand_box_left_btn}>
-            <Button btnName="Create" handleClick={() => {}} />
-            <Button btnName="Discover" handleClick={() => {}} />
+            <Button btnName="Create"  handleClick={()=>{}}/>
+            <Button btnName="Discover"  handleClick={()=>{}}/>
           </div>
         </div>
         <div className={Style.Brand_box_right}>

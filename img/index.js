@@ -2,6 +2,7 @@ import collection from "./collection.png"
 import eran from "./eran.png"
 import getable from "./getable.png"
 import hero from "./hero.png"
+import logo from "./logo-with-props.png"
 import musicwave from "./musicwave.png"
 import nft1 from "./nft-1.png"
 import nftImage1 from "./nft-image-1.png"
@@ -38,7 +39,7 @@ import creatorBackground11 from "./creatorBackground11.jpg"
 
 import facebook from "./facebook.svg"
 import logolight from "./logo-light.svg"
-import logo from "./logo.svg"
+import logosvg from "./logo.svg"
 import telegram from "./telegram.svg"
 import twitter from "./twitter.svg"
 import vectorHIW from "./vectorHIW.svg"
@@ -53,6 +54,7 @@ export default{
     eran,
     getable,
     hero,
+    logo,
     musicwave,
     nft1,
     nftImage1,
@@ -87,7 +89,7 @@ export default{
     creatorBackground11,
     facebook,
     logolight,
-    logo,
+    logosvg,
     telegram,
     twitter,
     vectorHIW,

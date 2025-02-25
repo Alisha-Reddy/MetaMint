@@ -9,7 +9,7 @@ const Video = () => {
         <h1 className="text-2xl sm:text-5xl leading-none">
           <span>📽️</span> The Videos
         </h1>
-        <p className="text-xs sm:text-xl sm:w-1/3 mt-4">
+        <p className="text-xs sm:text-xl md:w-1/3 mt-4">
         Watch, collect, and own exclusive video NFTs! <br/>
         Discover epic moments, rare clips, and digital collectibles that are truly one of a kind. <br/>
         Ready to level up your collection?  
