@@ -19,11 +19,13 @@ const page = () => {
   return (
     <div>
       <Banner bannerImage={images.creatorBackground3} />
-      <SearchBar/>
-      <Filter/>
-      <NFTCard NFTData={collectionArray}/>
-      <Slider/>
-      <Brand/>
+      <div className='w-[80%] md:w-[95%] mx-auto my-4 sm:my-14'>
+        <SearchBar/>
+        <Filter/>
+        <NFTCard NFTData={collectionArray}/>
+        <Slider/>
+        <Brand/>
+      </div>
     </div>
   )
 }
