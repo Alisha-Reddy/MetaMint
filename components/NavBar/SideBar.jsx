@@ -36,6 +36,14 @@ const SideBar = ({setSideMenu}) => {
     { name: "Subscription", link: "subscription" },
   ];
 
+  const socialIcons = [
+      { icon: TiSocialFacebook, link: "#" },
+      { icon: TiSocialInstagram, link: "#" },
+      { icon: TiSocialLinkedin, link: "#" },
+      { icon: TiSocialYoutube, link: "#" },
+      { icon: TiSocialTwitter, link: "#" },
+    ];
+
   return (
     <div>
       <GrClose className='absolute top-12 right-8 transition-all duration-200 ease-in-out cursor-pointer shadow-[var(--box-shadow)] hover:rotate-90' onClick={()=>setSideMenu(false)}/>
@@ -50,21 +58,14 @@ const SideBar = ({setSideMenu}) => {
             Discover the most outstanding articles on all topics of NFT & your own stories and share them
           </p>
           <div className='flex gap-5 text-xl items-center'>
-            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
-              <TiSocialFacebook/>
+          {socialIcons.map(({ icon: Icon, link }, i) => (
+            <a 
+              key={i}
+              href={link}
+              className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
+              <Icon/>
             </a>
-            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
-              <TiSocialLinkedin/>
-            </a>
-            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
-              <TiSocialTwitter/>
-            </a>
-            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
-              <TiSocialYoutube/>
-            </a>
-            <a href="#" className='p-1 rounded-full transition-all duration-300 ease-in grid hover:bg-[var(--icons-color)] hover:text-[var(--modal-solid-bg)] hover:shadow-md hover:shadow-[var(--shadow-dark-color)]'>
-              <TiSocialInstagram/>
-            </a>
+          ))}
           </div>
         </div>
         <div className='flex flex-col gap-4 p-8 uppercase font-medium'>
