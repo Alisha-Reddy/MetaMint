@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
-import Image from 'next/image'
-import { Banner, NFTCard } from '@/components/CollectionPage'
+"use client"
+import React, {useState} from 'react'
+import { Banner } from '@/components/CollectionPage'
 import { Brand, Title } from '@/components'
-import { FollowerTab } from '@/components/MainPage'
+import FollowerCard from '@/components/MainPage/FollowerTab/FollowerCard'
 import { AuthorNFTCard, AuthorProfileCard, AuthorTaps } from '@/components/AuthorPage'
 import images from "@/img"
 
@@ -33,9 +33,9 @@ const author = () =>{
                 heading="Popular Creators"
                 paragraph="Click on the music icon and enjoy NFT music or audio."
             />
-            <div className={Style.author_box}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-24">
                 {followerArray.map((el, i) => (
-                    <FollowerTab key={i} el={el} />
+                    <FollowerCard key={i + 1} i={i} />
                 ))}
             </div>
             <Brand />
