@@ -3,7 +3,7 @@ import images from "@/img"
 import { Banner, CollectionProfile, NFTCard } from '@/components/CollectionPage'
 import { Slider, Brand, Filter } from '@/components'
 
-const page = () => {
+const collection = () => {
   const collectionArray = [
     images.nftImage1,
     images.nftImage2,
@@ -31,4 +31,4 @@ const page = () => {
   )
 }
 
-export default page
+export default collection
