@@ -28,7 +28,7 @@ const author = () =>{
           <div className='w-[90%] md:w-[95%] mx-auto my-4 sm:my-14'>
             <AuthorProfileCard/>
             <AuthorTaps setActiveTab={setActiveTab} />
-            <AuthorNFTCard {...activeTab} />
+            <AuthorNFTCard activeTab={activeTab} />
             <Title
                 heading="Popular Creators"
                 paragraph="Click on the music icon and enjoy NFT music or audio."

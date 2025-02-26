@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   MdVerified,
-  MdCloudUpload,
   MdShare,
   MdOutlineReportProblem,
 } from "react-icons/md";

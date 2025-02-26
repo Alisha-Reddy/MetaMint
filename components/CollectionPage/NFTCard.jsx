@@ -6,7 +6,7 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
 import { LikeProfile } from "@/components";
 
-const NFTCard = ({ NFTData }) => {
+const NFTCard = ({ NFTData = [] }) => {
   const [likes, setLikes] = useState(Array(NFTData.length).fill(false));
   const [likeCounts, setLikeCounts] = useState(Array(NFTData.length).fill(21));
 
