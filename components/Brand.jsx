@@ -13,7 +13,7 @@ const Brand = () => {
           <h1 className="text-2xl my-3 font-bold md:text-5xl">Collect, Trade & Earn Crypto with MetaMint!</h1>
           <p className="md:text-base text-sm">Jump into the world of NFTs! Buy, sell, and discover rare digital treasures.</p>
 
-          <div className='flex justify-between items-center mt-4 sm:pr-10 sm:mx-4'>
+          <div className='flex justify-start gap-6 items-center mt-4 sm:pr-10 sm:mx-4'>
             <Button btnName="Create"  handleClick={()=>{}}/>
             <Button btnName="Discover"  handleClick={()=>{}}/>
           </div>
