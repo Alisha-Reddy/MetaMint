@@ -33,7 +33,7 @@ const author = () =>{
                 heading="Popular Creators"
                 paragraph="Click on the music icon and enjoy NFT music or audio."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-4">
                 {followerArray.map((el, i) => (
                     <FollowerCard key={i + 1} i={i} />
                 ))}

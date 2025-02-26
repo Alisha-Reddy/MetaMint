@@ -14,8 +14,8 @@ const Brand = () => {
           <p className="md:text-base text-sm">Jump into the world of NFTs! Buy, sell, and discover rare digital treasures.</p>
 
           <div className='flex justify-start gap-6 items-center mt-4 sm:pr-10 sm:mx-4'>
-            <Button btnName="Create"  handleClick={()=>{}}/>
-            <Button btnName="Discover"  handleClick={()=>{}}/>
+            <Button btnName="Create"  handleClick={()=>{}} styleName="float px-4 py-2 bg-[var(--bg-color)] rounded-3xl border border-[var(--shadow-dark-color)]"/>
+            <Button btnName="Discover"  handleClick={()=>{}} styleName="float px-4 py-2 bg-[var(--bg-color)] rounded-3xl border border-[var(--shadow-dark-color)]"/>
           </div>
         </div>
         <div>

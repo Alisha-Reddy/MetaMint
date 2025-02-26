@@ -9,7 +9,7 @@ const FollowerCard = ({ i }) => {
   const [following, setFollowing] = useState(false);
 
   return (
-    <div className="bg-[var(--bg-color)] rounded-2xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-[var(--bg-color)] rounded-2xl  p-4 hover:shadow-[0px_0px_20px_10px_var(--shadow-light-color)] transition-shadow duration-300">
       <div className="text-xl font-semibold text-gray-600">
         #{i + 1} <span className="text-yellow-500">🏆</span>
       </div>

@@ -24,7 +24,7 @@ const NFTCard = ({ NFTData = [] }) => {
       {NFTData.map((el, i) => (
         <div
           key={i}
-          className="grid cursor-pointer transition-all duration-300 ease-in rounded-xl hover:shadow-lg bg-[var(--bg-color)] overflow-hidden"
+          className="grid cursor-pointer transition-all duration-300 ease-in rounded-xl hover:shadow-[0px_0px_20px_10px_var(--shadow-light-color)] bg-[var(--bg-color)] overflow-hidden"
         >
           {/* Image & Like Section */}
           <div className="relative w-full h-60">
