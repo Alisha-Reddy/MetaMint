@@ -29,16 +29,16 @@ const AuthorTaps = ({setActiveTab}) => {
     setActiveBtn(index);
   };
   return (
-    <div className="my-4 sm:my-14 flex justify-between md:grid md:grid-cols-1 md:gap-8">
+    <div className="my-4 sm:my-14 flex justify-between md:gap-8">
         {/* Left Section - Tabs */}
-        <div className="flex gap-8 items-center md:grid md:grid-cols-2 md:gap-4 shadow-md p-4 rounded-lg">
+        <div className="flex  gap-8 items-center md:gap-4 shadow-md p-4 rounded-lg ">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => openTab(tab, index)}
-                className={`border border-[var(--icons-color)] bg-[var(--main-bg-color)] text-[var(--icons-color)] text-lg rounded-2xl px-4 py-2 transition-all duration-300 ${
-                  activeBtn === index ? "bg-[var(--icons-color)] text-[var(--main-bg-color)]" : ""
-                } hover:bg-[var(--icons-color)] hover:text-[var(--main-bg-color)]`}
+                className={`border border-[var(--icons-color)] bg-[var(--main-bg-color)] text-[var(--icons-color)] text-lg rounded-3xl px-4 py-2 transition-all duration-300 ${
+                  activeBtn === index ? "bg-blue-100 text-[var(--main-bg-color)] border-[var(--main-bg-color)]" : ""
+                } float`}
               >
                 {tab}
               </button>
@@ -56,7 +56,7 @@ const AuthorTaps = ({setActiveTab}) => {
           </div>
 
           {openList && (
-            <div className="absolute left-[-1rem] mt-6 w-64 bg-[var(--main-bg-color)] p-4 rounded-lg shadow-lg z-50">
+            <div className="absolute right-0 mt-6 w-64 bg-[var(--bg-color)] p-4 rounded-lg shadow-lg z-50">
               {listArray.map((el, i) => (
                 <div
                   key={i}
