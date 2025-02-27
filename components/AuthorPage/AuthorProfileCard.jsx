@@ -22,10 +22,10 @@ const AuthorProfileCard = () => {
   const [copied, setCopied] = useState(false);
 
   const socialIcons = [
-    { icon: TiSocialFacebook, link: "#", name: "Facebook" },
-    { icon: TiSocialInstagram, link: "#", name: "Instagram" },
-    { icon: TiSocialLinkedin, link: "#", name: "LinkedIn" },
-    { icon: TiSocialYoutube, link: "#", name: "YouTube" },
+    { icon: TiSocialFacebook, link: "#", label: "Facebook" },
+    { icon: TiSocialInstagram, link: "#", label: "Instagram" },
+    { icon: TiSocialLinkedin, link: "#", label: "LinkedIn" },
+    { icon: TiSocialYoutube, link: "#", label: "YouTube" },
   ];
 
   // Toggle between share and report menu
@@ -83,11 +83,11 @@ const AuthorProfileCard = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-start items-center gap-3 md:gap-4 text-xl md:text-2xl mt-4">
-          {socialIcons.map(({ icon: Icon, link, name }, i) => (
+          {socialIcons.map(({ icon: Icon, link, label }, i) => (
             <a
               key={i}
               href={link}
-              aria-label={name}
+              aria-label={label}
               className="bg-[var(--icons-color)] text-[var(--main-bg-color)] p-2 rounded-full border border-[var(--icons-color)] transition-all duration-300 hover:shadow-[0px_0px_10px_var(--shadow-light-color)] hover:bg-[var(--main-bg-color)] hover:text-[var(--icons-color)]"
             >
               <Icon />
@@ -112,13 +112,13 @@ const AuthorProfileCard = () => {
         {/* Share Menu */}
         {menu.share && (
           <div className="absolute p-2 w-48 md:w-60 shadow-[0px_0px_10px_var(--shadow-light-color)] rounded-xl bg-[var(--bg-color)] left-1/2 transform -translate-x-1/2 md:left-8 md:translate-x-0 top-14 md:top-16 z-50">
-            {socialIcons.map(({ icon: Icon, name }, i) => (
+            {socialIcons.map(({ icon: Icon, label }, i) => (
               <p
                 key={i}
                 className="flex items-center gap-2 p-2 cursor-pointer transition-all duration-300 hover:bg-[var(--icons-color)] hover:text-[var(--main-bg-color)] hover:rounded-sm"
               >
                 <Icon />
-                {name}
+                {label}
               </p>
             ))}
           </div>
