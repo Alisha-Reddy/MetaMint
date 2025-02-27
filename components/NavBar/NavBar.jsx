@@ -18,14 +18,14 @@ const NavBar = () => {
   }
 
   return (
-    <div className='relative w-screen mt-1 sm:mt-4 p-2 z-40'>
-      <div className='w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-1 sm:gap-4'>
-        <div className='grid grid-cols-[1fr_2fr] items-center'> 
-          <div className='w-full px-5'>
+    <div className=' relative w-screen mt-1 sm:mt-4 p-2 pb-0 z-40'>
+      <div className=' w-[95%] m-auto grid grid-cols-2 justify-between items-center gap-1 sm:gap-4'>
+        <div className='grid grid-cols-[1fr_2fr] gap-4 items-center'> 
+          <div className='w-full'>
             <Image 
             src={images.logo}
             alt = "Meta Mint"
-            className='w-full h-[90%]'
+            className='w-full object-cover drop-shadow-[4px_4px_5px_black]'
             />
           </div>
           <div className="w-[90%] sm:w-[60%] flex items-center justify-between px-1 sm:p-2 border-2 rounded-2xl sm:rounded-3xl overflow-hidden">

@@ -20,8 +20,7 @@ const Footer = () => {
           <Image
           src={images.logo}
           alt='Logo'
-          height={100}
-          width={100}
+          className='drop-shadow-[3px_3px_2px_var(--shadow-dark-color)]'
           />
           <p> Empowering creators and collectors with a seamless, cutting-edge NFT experience.</p>
             <div className='flex gap-5 text-xl items-center'>

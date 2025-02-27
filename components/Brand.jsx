@@ -9,7 +9,7 @@ const Brand = () => {
     <div>
       <div className="my-4 sm:my-14 grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-20 items-center">
         <div>
-          <Image src={images.logo} alt="brand logo" width={100} height={100} />
+          <Image src={images.logo} alt="brand logo" className='w-1/2 drop-shadow-[5px_5px_4px_black]' />
           <h1 className="text-2xl my-3 font-bold md:text-5xl">Collect, Trade & Earn Crypto with MetaMint!</h1>
           <p className="md:text-base text-sm">Jump into the world of NFTs! Buy, sell, and discover rare digital treasures.</p>
 
