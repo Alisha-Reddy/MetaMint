@@ -1,1 +1,2 @@
-export {default as Details} from "./Details"
+export {default as NFTDetails} from "./NFTDetails"
+export {default as NFTTabs} from "./NFTTabs"
