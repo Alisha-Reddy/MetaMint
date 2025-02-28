@@ -7,7 +7,7 @@ import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import images from "@/img"
 
 const NFTImg = () => {
-  const [description, setDescription] = useState(true);
+  const [description, setDescription] = useState(true); 
   const [details, setDetails] = useState(true);
   const [like, setLike] = useState(false);
 
