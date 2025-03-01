@@ -7,7 +7,7 @@ import { AuthorNFTCard, AuthorProfileCard, AuthorTaps } from '@/components/Autho
 import images from "@/img"
 
 const author = () =>{
-    const followerArray = [
+    const followerArray = [      
         { background: images.creatorBackground1, user: images.user1 },
         { background: images.creatorBackground2, user: images.user2 },
         { background: images.creatorBackground3, user: images.user3 },
