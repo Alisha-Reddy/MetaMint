@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { Banner } from '@/components/CollectionPage'
 import { Brand, Title } from '@/components'
 import FollowerCard from '@/components/MainPage/FollowerTab/FollowerCard'
-import { AuthorNFTCard, AuthorProfileCard, AuthorTaps } from '@/components/AuthorPage'
+import { AuthorNFTCard, AuthorProfileCard, AuthorTaps } from '@/components/AuthorPage' 
 import images from "@/img"
 
 const author = () =>{
