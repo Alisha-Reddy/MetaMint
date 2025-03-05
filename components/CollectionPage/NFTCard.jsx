@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BsImage } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
-import { LikeProfile } from "@/components";
+import { LikeProfile } from "@/components"; 
 
 const NFTCard = ({ NFTData = [] }) => {
   const [likes, setLikes] = useState(Array(NFTData.length).fill(false));
