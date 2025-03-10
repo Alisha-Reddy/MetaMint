@@ -11,7 +11,7 @@ const page = () => {
       images.nftImage3,
       images.nftImage1,
       images.nftImage2,
-      images.nftImage3,
+      images.nftImage3, 
       images.nftImage1,
       images.nftImage2,
       images.nftImage3,
